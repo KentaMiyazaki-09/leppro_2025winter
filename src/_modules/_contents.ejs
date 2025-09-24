@@ -1,14 +1,8 @@
 <div class="wrapper">
-  <div class="pc-content pc-content--left">
-    left
-  </div>
-  <div class="pc-content pc-content--right">
-    right
-  </div>
-  <div class="scroll-content">
-    <%- include("./_contents/_mv.ejs") %>
-    <%- include("./_contents/_intro.ejs") %>
-  </div>
+  <%- include("./_contents/_mv.ejs") %>
+  <%- include("./_contents/_intro.ejs") %>
+
+  <%- include("./_contents/_footer.ejs") %>
 </div>
 
 <script src="<%= rootURL %>assets/js/index.js?ver=<%= Date.now() %>"></script>

@@ -1,4 +1,5 @@
 @use './variables' as v;
+@use './functions' as f;
 
 // pcサイズ
 @mixin pc {
@@ -15,19 +16,29 @@
 }
 
 // font size
-@function get_vw($size, $viewport: 375) {
-  $rate: calc(100 / $viewport);
-  $calc: round($rate * $size * 1vw * 10);
-  $calc2: calc($calc / 10);
-  @return $calc2;
-}
 @mixin fz_vw($font_size) {
-  @include sp {
-    font-size: $font_size * 1px;
-    font-size: get_vw($font_size);
-  }
+  font-size: $font_size * 1px;
+  font-size: f.get_vw($font_size);
+}
+@mixin fz_vw_pc($font_size) {
   @include pc {
     font-size: $font_size * 1px;
-    font-size: get_vw($font_size, v.$pcMaxWidth);
+    font-size: f.get_vw($font_size, v.$pcMaxWidth);
   }
+}
+
+// fonts
+@mixin font_ZenKaku {
+  font-family: "zen-kaku-gothic-new", sans-serif;
+  font-weight: 500; // 500-700
+}
+
+@font-face {
+  font-family: ShreeDevanagari714;
+  src: url(../fonts/shree-devanagari-714.ttf);
+  font-weight: 400;
+}
+@mixin font_Shree {
+  font-family: "ShreeDevanagari714", "Noto Sans Devanagari", system-ui, sans-serif;
+  font-weight: 700;
 }

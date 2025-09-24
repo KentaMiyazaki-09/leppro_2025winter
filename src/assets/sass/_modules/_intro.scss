@@ -1,13 +1,18 @@
 @use '../_mixin' as m;
+@use '../functions' as f;
 @use '../variables' as v;
 
 .intro {
-  padding: 9.5% 9%;
-  background: #DADEE8;
+  padding: f.get_vw(25) f.get_vw(20);
+  position: relative;
+
+  @include m.pc{
+    padding: f.get_vw(100, v.$pcMaxWidth) f.get_vw(20, v.$pcMaxWidth);
+  }
 
   &__inner {
     @include m.pc{
-      max-width: 766px;
+      width: f.get_vw(383, v.$pcMaxWidth);
       margin: auto;
     }
   }
@@ -15,7 +20,7 @@
   &__header {
     position: relative;
     text-align: center;
-    margin-bottom: 10%;
+    margin-bottom: f.get_vw(45);
 
     &::after {
       content: "";
@@ -34,27 +39,44 @@
       background-color: #fff;
       width: calc(100% - 5px);
       border: 1px solid #333;
-      padding: 8% 5%;
+      padding: f.get_vw(25) 10px;
+      @include m.pc{
+        padding: f.get_vw(25, v.$pcMaxWidth) 10px;
+      }
     }
 
     &__ttl {
-      margin-bottom: 5.5%;
+      @include m.fz_vw(12);
+      @include m.fz_vw_pc(14);
+      margin-bottom: f.get_vw(15);
+      @include m.pc{
+        margin-bottom: f.get_vw(15, v.$pcMaxWidth);
+      }
     }
     &__shop {
-      font-size: 10px;
-      margin-bottom: 9%;
+      @include m.fz_vw(10);
+      @include m.fz_vw_pc(12);
+      margin-bottom: f.get_vw(25);
+      @include m.pc{
+        margin-bottom: f.get_vw(25, v.$pcMaxWidth);
+      }
     }
     &__caution {
-      font-size: 10px;
-      margin-bottom: 4%;
+      @include m.fz_vw(10);
+      @include m.fz_vw_pc(12);
+      margin-bottom: f.get_vw(10);
+      @include m.pc{
+        margin-bottom: f.get_vw(10, v.$pcMaxWidth);
+      }
     }
     &__caution-list-box {
       display: flex;
       justify-content: center;
     }
     &__caution-list {
-      font-size: 10px;
       > li {
+        @include m.fz_vw(10);
+        @include m.fz_vw_pc(12);
         text-align: left;
       }
     }
@@ -64,8 +86,13 @@
   &__lead {
     text-align: center;
     > p {
+      @include m.fz_vw(12);
+      @include m.fz_vw_pc(12);
       &:not(:last-child) {
-        margin-bottom: 5%;
+        margin-bottom: f.get_vw(20);
+        @include m.pc{
+          margin-bottom: f.get_vw(20, v.$pcMaxWidth);
+        }
       }
     }
   }

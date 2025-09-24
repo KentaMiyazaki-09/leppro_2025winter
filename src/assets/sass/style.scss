@@ -1,3 +1,4 @@
+@use './_mixin' as m;
 @use './_reset';
 @use './_base';
 
@@ -5,3 +6,16 @@
 @use './_modules/_layout';
 @use './_modules/_mv';
 @use './_modules/_intro';
+
+@use './_modules/_footer';
+
+.is-pc {
+  @include m.sp {
+    display: none;
+  }
+}
+.is-sp {
+  @include m.pc {
+    display: none;
+  }
+}

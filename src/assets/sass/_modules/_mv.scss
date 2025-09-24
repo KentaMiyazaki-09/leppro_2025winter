@@ -3,9 +3,10 @@
 
 .mv {
   padding: 2.3%;
-  
   &__inner {
     position: relative;
+    width: 81.5%;
+    margin: auto;
   }
   &__ttl {
     width: 40%;
@@ -34,8 +35,10 @@
       display: flex;
     }
     .embla__slide {
-      flex: 0 0 100%;
-      min-width: 0;
+      @include m.sp{
+        flex: 0 0 100%;
+        min-width: 0;
+      }
     }
 
     &__label {
@@ -59,9 +62,7 @@
   &__logo-lepsim {
     width: 30%;
     margin: auto;
-
     > svg {
-      width: 100%;
       font-size: 0;
       line-height: 1;
       path {

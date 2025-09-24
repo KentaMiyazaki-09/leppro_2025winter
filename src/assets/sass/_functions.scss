@@ -1,0 +1,10 @@
+@use "sass:math";
+
+// px → vw（少数はdigit桁で丸める）
+@function get_vw($px, $viewport: 375, $digits: 3) {
+  $raw: calc(($px / $viewport) * 100);
+  $factor: 1;
+  @for $i from 1 through $digits { $factor: $factor * 10; }
+  $rounded: calc(round($raw * $factor) / $factor);
+  @return $rounded * 1vw; // 例: 16px@375px => 4.267vw
+}
