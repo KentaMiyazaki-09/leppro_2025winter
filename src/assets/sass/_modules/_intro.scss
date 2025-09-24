@@ -1,0 +1,73 @@
+@use '../_mixin' as m;
+@use '../variables' as v;
+
+.intro {
+  padding: 9.5% 9%;
+  background: #DADEE8;
+
+  &__inner {
+    @include m.pc{
+      max-width: 766px;
+      margin: auto;
+    }
+  }
+
+  &__header {
+    position: relative;
+    text-align: center;
+    margin-bottom: 10%;
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 5px;
+      right: 0;
+      width: calc(100% - 5px);
+      height: 100%;
+      background-color: #B4BDD1;
+      border: 1px solid #333;
+    }
+
+    &__inner {
+      z-index: 9;
+      position: relative;
+      background-color: #fff;
+      width: calc(100% - 5px);
+      border: 1px solid #333;
+      padding: 8% 5%;
+    }
+
+    &__ttl {
+      margin-bottom: 5.5%;
+    }
+    &__shop {
+      font-size: 10px;
+      margin-bottom: 9%;
+    }
+    &__caution {
+      font-size: 10px;
+      margin-bottom: 4%;
+    }
+    &__caution-list-box {
+      display: flex;
+      justify-content: center;
+    }
+    &__caution-list {
+      font-size: 10px;
+      > li {
+        text-align: left;
+      }
+    }
+
+  }
+
+  &__lead {
+    text-align: center;
+    > p {
+      &:not(:last-child) {
+        margin-bottom: 5%;
+      }
+    }
+  }
+
+}
