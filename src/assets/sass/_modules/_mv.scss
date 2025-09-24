@@ -1,0 +1,82 @@
+@use '../_mixin' as m;
+@use '../variables' as v;
+
+.mv {
+  padding: 2.3%;
+  
+  &__inner {
+    position: relative;
+  }
+  &__ttl {
+    width: 40%;
+    margin: auto;
+    font-size: 0;
+    line-height: 1;
+
+    @include m.sp{
+      z-index: 9;
+      position: absolute;
+      top: 4%;
+      left: 0;
+      right: 0;
+    }
+    @include m.pc{
+      margin-bottom: 10%;
+    }
+  }
+
+  &__carousel {
+    font-size: 0;
+    line-height: 1;
+
+    overflow: hidden;
+    .embla__container {
+      display: flex;
+    }
+    .embla__slide {
+      flex: 0 0 100%;
+      min-width: 0;
+    }
+
+    &__label {
+      &--sp {
+        z-index: 9;
+        position: absolute;
+        top: 50%;
+        right: 5%;
+
+        @include m.fz_vw(11);
+        color: #fff;
+        line-height:1;
+
+        display:inline-block;
+        transform-origin: 100% 0;
+        transform: rotate(90deg) translateX(50%);
+      }
+    }
+  }
+
+  &__logo-lepsim {
+    width: 30%;
+    margin: auto;
+
+    > svg {
+      width: 100%;
+      font-size: 0;
+      line-height: 1;
+      path {
+        fill: white;
+        @include m.pc{
+          fill: black;
+        }
+      }
+    }
+
+    @include m.sp{
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+    }
+  }
+}
