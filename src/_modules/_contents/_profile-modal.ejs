@@ -1,0 +1,170 @@
+<%
+  const profileList = [
+    {
+      name: "310",
+      spot: "パークプレイス大分",
+      status: "163cm / 40代前半、2児のママ",
+      instagram: "/",
+      board: "/",
+      question1: [
+        {
+          Q: "ここに質問が入ります310-1",
+          A: "ここに答えが入りますここに答えが入ります310-1"
+        },
+        {
+          Q: "ここに質問が入ります310-2",
+          A: "ここに答えが入りますここに答えが入ります310-2"
+        },
+      ],
+      question2: [
+        {
+          Q: "ここに質問が入ります310-3",
+          A: "ここに答えが入りますここに答えが入ります310-3"
+        },
+        {
+          Q: "ここに質問が入ります310-4",
+          A: "ここに答えが入りますここに答えが入ります310-4"
+        },
+      ],
+    },
+    {
+      name: "MIWATARA",
+      spot: "ららぽーと新三郷",
+      status: "156cm / 30代後半、2児のママ",
+      instagram: "/",
+      board: "/",
+      question1: [
+        {
+          Q: "ここに質問が入りますMIWATARA-1",
+          A: "ここに答えが入りますここに答えが入りますMIWATARA-1"
+        },
+        {
+          Q: "ここに質問が入りますMIWATARA-2",
+          A: "ここに答えが入りますここに答えが入りますMIWATARA-2"
+        },
+      ],
+      question2: [
+        {
+          Q: "ここに質問が入りますMIWATARA-3",
+          A: "ここに答えが入りますここに答えが入りますMIWATARA-3"
+        },
+        {
+          Q: "ここに質問が入りますMIWATARA-4",
+          A: "ここに答えが入りますここに答えが入りますMIWATARA-4"
+        },
+      ],
+    },
+    {
+      name: "YUKIHA",
+      spot: "モモテラス",
+      status: "155cm / 30代前半、2児のママ",
+      instagram: "/",
+      board: "/",
+      question1: [
+        {
+          Q: "ここに質問が入りますYUKIHA-1",
+          A: "ここに答えが入りますここに答えが入りますYUKIHA-1"
+        },
+        {
+          Q: "ここに質問が入りますYUKIHA-2",
+          A: "ここに答えが入りますここに答えが入りますYUKIHA-2"
+        },
+      ],
+      question2: [
+        {
+          Q: "ここに質問が入りますYUKIHA-3",
+          A: "ここに答えが入りますここに答えが入りますYUKIHA-3"
+        },
+        {
+          Q: "ここに質問が入りますYUKIHA-4",
+          A: "ここに答えが入りますここに答えが入りますYUKIHA-4"
+        },
+      ],
+    },
+    {
+      name: "KATSUKO",
+      spot: "イオンモール四條畷",
+      status: "158cm / 30代後半、3児のママ",
+      instagram: "/",
+      board: "/",
+      question1: [
+        {
+          Q: "ここに質問が入りますKATSUKO-1",
+          A: "ここに答えが入りますここに答えが入りますKATSUKO-1"
+        },
+        {
+          Q: "ここに質問が入りますKATSUKO-2",
+          A: "ここに答えが入りますここに答えが入りますKATSUKO-2"
+        },
+      ],
+      question2: [
+        {
+          Q: "ここに質問が入りますKATSUKO-3",
+          A: "ここに答えが入りますここに答えが入りますKATSUKO-3"
+        },
+        {
+          Q: "ここに質問が入りますKATSUKO-4",
+          A: "ここに答えが入りますここに答えが入りますKATSUKO-4"
+        },
+      ],
+    },
+  ]
+%>
+
+<% profileList.forEach(element => { %>
+  <div id="profile-modal-<%- element.name %>" class="profile-modal profile-modal--<%- element.name %> has-active">
+  
+    <div class="profile-modal__container">
+  
+      <div class="profile-modal__contents">
+  
+        <div class="profile-modal__question">
+        <% element.question1.forEach(question => { %>
+          <div class="profile-modal__question__item">
+            <p class="profile-modal__question__item__q"><%- question.Q %></p>
+            <p class="profile-modal__question__item__a"><%- question.A %></p>
+          </div>
+        <% }) %>
+        </div>
+
+        <div class="profile-modal__photo">
+          <img class="profile-modal__photo__1" src="<%- rootURL %>/assets/img/profile/<%- element.name %>_1.png" alt="">
+          <img class="profile-modal__photo__2" src="<%- rootURL %>/assets/img/profile/<%- element.name %>_2.png" alt="">
+  
+          <div class="profile-modal__photo__circle profile-modal__photo__circle--1"></div>
+          <div class="profile-modal__photo__circle profile-modal__photo__circle--2"></div>
+          <div class="profile-modal__photo__circle profile-modal__photo__circle--3"></div>
+          <div class="profile-modal__photo__circle profile-modal__photo__circle--4"></div>
+        </div>
+  
+        <div class="profile-modal__info">
+          <p class="profile-modal__info__name"><%- element.name %></p>
+          <p class="profile-modal__info__spot">
+            <img class="profile-modal__info__spot__icon" src="<%- rootURL %>/assets/img/icon_pin.svg" alt="">
+            <%- element.spot %>
+          </p>
+          <p class="profile-modal__info__status"><%- element.status %></p>
+          <div class="profile-modal__info__link-box">
+            <a href="<%- element.instagram %>" target="_blank" rel="noopener noreferrer" class="profile-modal__info__link">INSTAGRAM</a>
+            <a href="<%- element.board %>" target="_blank" rel="noopener noreferrer" class="profile-modal__info__link">STAFF BOARD</a>
+          </div>
+        </div>
+  
+        <div class="profile-modal__question">
+        <% element.question2.forEach(question => { %>
+          <div class="profile-modal__question__item">
+            <p class="profile-modal__question__item__q"><%- question.Q %></p>
+            <p class="profile-modal__question__item__a"><%- question.A %></p>
+          </div>
+        <% }) %>
+        </div>
+  
+        <button type="button" class="profile-modal__close">
+          <img src="<%- rootURL %>/assets/img/icon_close.svg" alt="">
+        </button>
+      </div>
+  
+    </div>
+  
+  </div>
+<% }) %>

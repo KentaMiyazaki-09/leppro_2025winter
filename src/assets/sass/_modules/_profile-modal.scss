@@ -1,0 +1,276 @@
+@use '../_mixin' as m;
+@use '../functions' as f;
+@use '../variables' as v;
+
+.profile-modal {
+  z-index: 50;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+
+  @include m.pc {
+    backdrop-filter: blur(5px);
+  }
+
+  &.has-active {
+    transition: opacity 0.6s ease;
+    opacity: 0;
+    pointer-events: none;
+    &.active {
+      opacity: 1;
+      pointer-events: auto;
+    }
+  }
+
+  &__container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow-y: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    @include m.sp{
+      background-color: #fff;
+    }
+  }
+
+  &__contents {
+    margin: auto;
+    padding: f.get_vw(27) f.get_vw(30) f.get_vw(20);
+    @include m.pc{
+      background-color: #fff;
+      padding: f.get_vw(27, v.$pcMaxWidth) f.get_vw(30, v.$pcMaxWidth) f.get_vw(20, v.$pcMaxWidth);
+      width: 31.9%;
+      border-radius: 20px;
+    }
+  }
+
+  &__question {
+    display: flex;
+    justify-content: space-between;
+
+    &__item {
+      width: 46.5%;
+      &:nth-child(2n) {
+        margin-top: f.get_vw(12);
+        @include m.pc{
+          margin-top: f.get_vw(12, v.$pcMaxWidth);
+        }
+      }
+      &__q {
+        @include m.fz_vw(11);
+        @include m.fz_vw_pc(11);
+        margin-bottom: f.get_vw(10);
+        @include m.pc{
+          margin-bottom: f.get_vw(10, v.$pcMaxWidth);
+        }
+      }
+      &__a {
+        @include m.fz_vw(11);
+        @include m.fz_vw_pc(11);
+        padding: f.get_vw(10) f.get_vw(15);
+        background: linear-gradient(180deg, #E6FFD2 0%, #A9FF60 100%);
+        border-radius: 15px;
+        @include m.pc{
+          padding: f.get_vw(10, v.$pcMaxWidth) f.get_vw(15, v.$pcMaxWidth);
+        }
+      }
+    }
+  }
+
+  &__photo {
+    position: relative;
+    width: f.get_vw(197);
+    margin: f.get_vw(30) auto f.get_vw(20);
+    @include m.pc{
+      width: f.get_vw(197, v.$pcMaxWidth);
+      margin: f.get_vw(30, v.$pcMaxWidth) auto f.get_vw(20, v.$pcMaxWidth);
+    }
+    > img {
+      width: f.get_vw(130);
+      @include m.pc{
+        width: f.get_vw(130, v.$pcMaxWidth);
+      }
+    }
+    &__1 {
+      margin-top: f.get_vw(20);
+      @include m.pc{
+        margin-top: f.get_vw(20, v.$pcMaxWidth);
+      }
+    }
+    &__2 {
+      position: absolute;
+      top: 0;
+      right: 0;
+    }
+
+    &__circle {
+      position: absolute;
+      width: f.get_vw(20);
+      aspect-ratio: 1/1;
+      border-radius: 50%;
+      @include m.pc{
+        width: f.get_vw(20, v.$pcMaxWidth);
+      }
+      &--1 {
+        top: f.get_vw(30);
+        left: f.get_vw(-40);
+        @include m.pc{
+          top: f.get_vw(30, v.$pcMaxWidth);
+          left: f.get_vw(-40, v.$pcMaxWidth);
+        }
+      }
+      &--2 {
+        top: f.get_vw(50);
+        left: f.get_vw(-10);
+        @include m.pc{
+          top: f.get_vw(50, v.$pcMaxWidth);
+          left: f.get_vw(-10, v.$pcMaxWidth);
+        }
+      }
+      &--3 {
+        top: f.get_vw(60);
+        left: f.get_vw(-20);
+        @include m.pc{
+          top: f.get_vw(60, v.$pcMaxWidth);
+          left: f.get_vw(-20, v.$pcMaxWidth);
+        }
+      }
+      &--4 {
+        top: f.get_vw(110);
+        left: f.get_vw(-60);
+        @include m.pc{
+          top: f.get_vw(110, v.$pcMaxWidth);
+          left: f.get_vw(-60, v.$pcMaxWidth);
+        }
+      }
+    }
+  }
+
+  &__info {
+    margin-bottom: f.get_vw(30);
+    @include m.pc{
+      margin-bottom: f.get_vw(30, v.$pcMaxWidth);
+    }
+    &__name {
+      text-align: center;
+      @include m.font_Shree;
+      @include m.fz_vw(16);
+      @include m.fz_vw_pc(16);
+      margin-bottom: f.get_vw(20);
+      @include m.pc{
+        margin-bottom: f.get_vw(20, v.$pcMaxWidth);
+      }
+    }
+    &__spot {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: f.get_vw(10);
+      @include m.fz_vw(10);
+      @include m.fz_vw_pc(10);
+      @include m.pc{
+        margin-bottom: f.get_vw(10, v.$pcMaxWidth);
+      }
+      &__icon {
+        width: f.get_vw(15);
+        margin-right: f.get_vw(5);
+        @include m.pc{
+          margin-right: f.get_vw(5, v.$pcMaxWidth);
+          width: f.get_vw(15, v.$pcMaxWidth);
+        }
+      }
+    }
+    &__status {
+      text-align: center;
+      @include m.fz_vw(11);
+      @include m.fz_vw_pc(11);
+      margin-bottom: f.get_vw(20);
+      @include m.pc{
+        margin-bottom: f.get_vw(20, v.$pcMaxWidth);
+      }
+    }
+    &__link-box {
+      display: flex;
+      justify-content: space-between;
+      width: f.get_vw(170);
+      margin: auto;
+      @include m.pc{
+        width: f.get_vw(170, v.$pcMaxWidth);
+      }
+      > * {
+        &:not(:last-child) {
+          margin-right: f.get_vw(10);
+          @include m.pc{
+            margin-right: f.get_vw(10, v.$pcMaxWidth);
+          }
+        }
+      }
+    }
+    &__link {
+      @include m.font_Shree;
+      @include m.fz_vw(9);
+      @include m.fz_vw_pc(9);
+      border-radius: 20px;
+      border: 1px solid #333;
+      line-height: 1;
+      text-align: center;
+      white-space: nowrap;
+      padding: f.get_vw(7.5) f.get_vw(13) f.get_vw(5);
+      @include m.pc{
+        padding: f.get_vw(7.5, v.$pcMaxWidth) f.get_vw(13, v.$pcMaxWidth) f.get_vw(5, v.$pcMaxWidth);
+      }
+    }
+  }
+
+  &__close {
+    width: f.get_vw(40);
+    display: block;
+    margin: f.get_vw(30) auto 0;
+    @include m.pc{
+      width: f.get_vw(40, v.$pcMaxWidth);
+      margin: f.get_vw(30, v.$pcMaxWidth) auto 0;
+    }
+
+    aspect-ratio: 1/1;
+    width: f.get_vw(40);
+    border: 1px solid #333;
+    border-radius: 50%;
+    line-height: 1;
+    font-size: 0;
+    @include m.pc{
+      width: f.get_vw(40, v.$pcMaxWidth);
+    }
+
+    > img {
+      width: f.get_vw(15);
+      @include m.pc{
+        width: f.get_vw(15, v.$pcMaxWidth);
+      }
+    }
+  }
+
+  &--310 {
+    .profile-modal__photo__circle {
+      background-color: #FF622A;
+    }
+  }
+  &--MIWATARA {
+    .profile-modal__photo__circle {
+      background-color: #82FFB0;
+    }
+  }
+  &--YUKIHA {
+    .profile-modal__photo__circle {
+      background-color: #FFFC3B;
+    }
+  }
+  &--KATSUKO {
+    .profile-modal__photo__circle {
+      background-color: #48B3FF;
+    }
+  }
+}
