@@ -1,0 +1,215 @@
+@use '../_mixin' as m;
+@use '../functions' as f;
+@use '../variables' as v;
+
+.item {
+  padding: f.get_vw(20);
+  @include m.pc{
+    padding: f.get_vw(20, v.$pcMaxWidth);
+  }
+
+  &__slider-box {
+    text-align: center;
+  }
+
+  &--outer {
+    background-color: #EDF2E7;
+  }
+
+  &__header {
+    @include m.font_Shree;
+    display: flex;
+    @include m.fz_vw(11);
+    @include m.fz_vw_pc(11);
+    margin-bottom: f.get_vw(40);
+    @include m.sp{
+      justify-content: space-between;
+    }
+    @include m.pc{
+      justify-content: center;
+      margin-bottom: f.get_vw(40, v.$pcMaxWidth);
+    }
+
+    &__center {
+      @include m.pc{
+        margin: 0 f.get_vw(150, v.$pcMaxWidth);
+      }
+    }
+  }
+
+  &__ttl {
+    margin-bottom: f.get_vw(30);
+    @include m.pc{
+      margin-bottom: f.get_vw(30, v.$pcMaxWidth);
+    }
+    &__primary {
+      text-align: center;
+      @include m.font_Shree;
+      @include m.fz_vw(25);
+      @include m.fz_vw_pc(25);
+      line-height: 1;
+      margin-bottom: f.get_vw(5);
+      @include m.pc{
+        margin-bottom: f.get_vw(5, v.$pcMaxWidth);
+      }
+    }
+    &__primaryja {
+      text-align: center;
+      @include m.fz_vw(10);
+      @include m.fz_vw_pc(10);
+      margin-bottom: f.get_vw(20);
+      @include m.pc{
+        margin-bottom: f.get_vw(20, v.$pcMaxWidth);
+      }
+    }
+    &__sub {
+      text-align: center;
+    }
+  }
+
+  &__container {
+    @include m.sp{
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+    @include m.pc{
+      position: relative;
+    }
+  }
+
+  &__comment {
+    width: f.get_vw(157);
+    @include m.pc{
+      position: absolute;
+    }
+    &__lead {
+      @include m.fz_vw(10);
+      @include m.fz_vw_pc(10);
+      border-radius: 20px;
+      padding: f.get_vw(15);
+      @include m.pc{
+        padding: f.get_vw(15, v.$pcMaxWidth);
+      }
+
+      position: relative;
+      &__triangle {
+        position: absolute;
+        bottom: f.get_vw(-11);
+        left: 0;
+        right: 0;
+        margin: auto;
+        width: f.get_vw(20);
+        @include m.pc{
+          width: f.get_vw(20, v.$pcMaxWidth);
+          bottom: f.get_vw(-11, v.$pcMaxWidth);
+        }
+      }
+    }
+    &__img {
+      margin: auto;
+      display: block;
+    }
+
+    &--310 {
+      @include m.pc{
+        top: 0;
+        left: 0;
+      }
+      .item__comment__lead {
+         margin-bottom: f.get_vw(20);
+        @include m.pc{
+          margin-bottom: f.get_vw(20, v.$pcMaxWidth);
+        }
+      }
+      .item__comment__lead,
+      .item__comment__lead__comment {
+        background-color: v.$orange;
+      }
+      .item__comment__lead__triangle path {
+        fill: v.$orange;
+      }
+      .item__comment__img {
+        width: f.get_vw(55);
+        @include m.pc{
+          width: f.get_vw(55, v.$pcMaxWidth);
+        }
+      }
+    }
+    &--KATSUKO {
+      @include m.pc{
+        top: 0;
+        right: 0;
+      }
+      .item__comment__lead {
+         margin-bottom: f.get_vw(20);
+        @include m.pc{
+          margin-bottom: f.get_vw(20, v.$pcMaxWidth);
+        }
+      }
+      .item__comment__lead,
+      .item__comment__lead__comment {
+        background-color: v.$blue;
+      }
+      .item__comment__lead__triangle path {
+        fill: v.$blue;
+      }
+      .item__comment__img {
+        width: f.get_vw(70);
+        @include m.pc{
+          width: f.get_vw(70, v.$pcMaxWidth);
+        }
+      }
+    }
+    &--YUKIHA {
+      @include m.pc{
+        bottom: 0;
+        left: 0;
+      }
+      .item__comment__lead {
+         margin-bottom: f.get_vw(15);
+        @include m.pc{
+          margin-bottom: f.get_vw(15, v.$pcMaxWidth);
+        }
+      }
+      .item__comment__lead,
+      .item__comment__lead__comment {
+        background-color: v.$yellow;
+      }
+      .item__comment__lead__triangle path {
+        fill: v.$yellow;
+      }
+      .item__comment__img {
+        width: f.get_vw(80);
+        @include m.pc{
+          width: f.get_vw(80, v.$pcMaxWidth);
+        }
+      }
+    }
+    &--MIWATARA {
+      @include m.pc{
+        bottom: 0;
+        right: 0;
+      }
+      .item__comment__lead {
+         margin-bottom: f.get_vw(25);
+        @include m.pc{
+          margin-bottom: f.get_vw(25, v.$pcMaxWidth);
+        }
+      }
+      .item__comment__lead,
+      .item__comment__lead__comment {
+        background-color: v.$green;
+      }
+      .item__comment__lead__triangle path {
+        fill: v.$green;
+      }
+       .item__comment__img {
+        width: f.get_vw(70);
+        @include m.pc{
+          width: f.get_vw(70, v.$pcMaxWidth);
+        }
+      }
+    }
+  }
+}

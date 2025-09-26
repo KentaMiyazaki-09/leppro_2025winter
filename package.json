@@ -32,6 +32,7 @@
     "webpack-stream": "^7.0.0"
   },
   "dependencies": {
-    "embla-carousel": "^8.6.0"
+    "embla-carousel": "^8.6.0",
+    "embla-carousel-fade": "^8.6.0"
   }
 }

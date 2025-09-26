@@ -255,22 +255,22 @@
 
   &--310 {
     .profile-modal__photo__circle {
-      background-color: #FF622A;
+      background-color: v.$orange;
     }
   }
   &--MIWATARA {
     .profile-modal__photo__circle {
-      background-color: #82FFB0;
+      background-color: v.$green;
     }
   }
   &--YUKIHA {
     .profile-modal__photo__circle {
-      background-color: #FFFC3B;
+      background-color: v.$yellow;
     }
   }
   &--KATSUKO {
     .profile-modal__photo__circle {
-      background-color: #48B3FF;
+      background-color: v.$blue;
     }
   }
 }

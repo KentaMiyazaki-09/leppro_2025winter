@@ -1,0 +1,22 @@
+<div class="item-slider">
+
+  <div class="item-slider__carousel embla">
+    <div class="embla__container">
+      <% items.forEach(item => { %>
+      <div class="embla__slide"><img src="<%- rootURL %>/assets/img/item/<%- item %>" alt=""></div>
+      <% }) %>
+    </div>
+  </div>
+
+  <button type="button" class="item-slider__change-btn">
+    <span class="item-slider__change-btn__text">CUSTOM<br>CHANGE</span>
+    <svg class="item-slider__change-btn__arrow" width="45" height="27" viewBox="0 0 45 27" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M35.4647 5.15063C37.042 5.58787 38.9617 6.24208 40.6825 7.11985C42.6209 8.10852 43.4488 10.4041 43.8465 12.0462C44.2373 13.6603 43.8043 14.9556 43.412 15.8276C42.7154 17.3758 40.8313 19.3313 38.2928 21.2183C37.0677 22.1291 35.5805 22.7257 33.387 23.4407C28.3662 25.0773 23.8913 25.806 21.3949 25.9704C19.1698 26.1169 16.3469 25.7008 13.4094 25.1264C9.60034 24.3814 6.68265 22.2522 4.22577 19.9543C2.89862 18.713 2.37456 17.6464 1.93743 16.6109C0.440165 13.0638 1.14218 10.8019 1.31861 9.62082C1.55029 8.06994 2.45883 7.45517 3.24619 6.49768C4.11781 5.65362 4.9157 5.04214 5.52794 4.74216C5.87949 4.55066 6.31398 4.27944 7.28831 4" stroke="#333333" stroke-width="2" stroke-linecap="round"/>
+    <path d="M1 3.12465C6.0692 1.77197 8.19137 1.16114 10.6032 1.00151C10.9865 0.976141 11.053 1.27555 10.9662 1.49147C10.2548 2.44554 9.19507 4.27987 8.47567 5.58181C8.38624 5.82817 8.29815 6.13266 8.20739 7" stroke="#333333" stroke-width="2" stroke-linecap="round"/>
+    </svg>
+    <div class="item-slider__change-btn__bg">
+      <img src="<%- rootURL %>/assets/img/item/bg_gradation.png" alt="">
+    </div>
+  </button>
+
+</div>

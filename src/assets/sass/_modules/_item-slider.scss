@@ -1,0 +1,72 @@
+@use '../_mixin' as m;
+@use '../functions' as f;
+@use '../variables' as v;
+
+.item-slider {
+  position: relative;
+  overflow: hidden;
+  @include m.pc{
+    display: inline-block;
+  }
+
+  &__change-btn {
+    z-index: 9;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: f.get_vw(67);
+    aspect-ratio: 1/1;
+    @include m.fz_vw(10);
+    @include m.fz_vw_pc(10);
+    @include m.pc{
+      width: f.get_vw(67, v.$pcMaxWidth);
+    }
+    &__arrow {
+      z-index: 9;
+      position: relative;
+      display: block;
+      margin: f.get_vw(9) auto 0;
+      width: f.get_vw(21);
+      @include m.pc{
+        width: f.get_vw(21, v.$pcMaxWidth);
+        margin-top: f.get_vw(9, v.$pcMaxWidth);
+      }
+    }
+    &__text {
+      z-index: 9;
+      position: relative;
+    }
+    &__bg {
+      font-size: 0;
+      line-height: 1;
+      position: absolute;
+      top: 0;
+      left: 0;
+      mask-image: url("../img/item/mask_star.png");
+      mask-position: center;
+      mask-repeat: no-repeat;
+      mask-size: contain; 
+    }
+  }
+
+  &__carousel {
+    border: 1px solid #333;
+    background-color: #fff;
+    border-radius: 50%;
+    margin: auto;
+    font-size: 0;
+    line-height: 1;
+    width: f.get_vw(275);
+    aspect-ratio: 1/1;
+    @include m.pc{
+      width: f.get_vw(275, v.$pcMaxWidth);
+    }
+    .embla__container {
+      display: flex;
+    }
+    .embla__slide {
+      flex: 0 0 100%;
+      min-width: 0;
+    }
+  }
+}
