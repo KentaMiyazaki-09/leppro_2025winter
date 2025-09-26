@@ -1,0 +1,153 @@
+@use '../_mixin' as m;
+@use '../functions' as f;
+@use '../variables' as v;
+
+.profile-button {
+  position: relative;
+  &__name {
+    z-index: 9;
+    position: absolute;
+    @include m.font_Shree;
+    @include m.fz_vw(12);
+    @include m.fz_vw_pc(12);
+  }
+  &__opener {
+    z-index: 9;
+    position: absolute;
+    display: block;
+    aspect-ratio: 1/1;
+    border: 1px solid #333;
+    border-radius: 50%;
+    line-height: 1;
+    font-size: 0;
+    background-color: #fff;
+    width: f.get_vw(32);
+    @include m.pc{
+      width: f.get_vw(32, v.$pcMaxWidth);
+    }
+    &__plus-icon {
+      width: f.get_vw(10);
+      @include m.pc{
+        width: f.get_vw(10, v.$pcMaxWidth);
+      }
+    }
+  }
+
+  &--310 {
+    margin-left: f.get_vw(34);
+    width: f.get_vw(114);
+    @include m.pc{
+      margin-left: f.get_vw(34, v.$pcMaxWidth);
+      width: f.get_vw(114, v.$pcMaxWidth);
+    }
+
+    .profile-button__name {
+      top: f.get_vw(33);
+      left: f.get_vw(-13);
+      rotate: -45deg;
+      @include m.pc{
+        top: f.get_vw(33, v.$pcMaxWidth);
+        left: f.get_vw(-13, v.$pcMaxWidth);
+      }
+    }
+
+    .profile-button__opener {
+      bottom: f.get_vw(30);
+      left: 0;
+      @include m.pc{
+        bottom: f.get_vw(30, v.$pcMaxWidth);
+        left: 0;
+      }
+    }
+  }
+
+  &--MIWATARA {
+    margin-top: f.get_vw(24);
+    margin-left: f.get_vw(34);
+    width: f.get_vw(158);
+    @include m.pc{
+      margin-top: f.get_vw(24, v.$pcMaxWidth);
+      margin-left: f.get_vw(34, v.$pcMaxWidth);
+      width: f.get_vw(158, v.$pcMaxWidth);
+    }
+
+    .profile-button__name {
+      top: f.get_vw(12);
+      right: f.get_vw(-3);
+      rotate: 30deg;
+      @include m.pc{
+        top: f.get_vw(12, v.$pcMaxWidth);
+        left: f.get_vw(-3, v.$pcMaxWidth);
+      }
+    }
+
+    .profile-button__opener {
+      top: f.get_vw(50);
+      right: 0;
+      @include m.pc{
+        top: f.get_vw(50, v.$pcMaxWidth);
+      }
+    }
+  }
+
+  &--YUKIHA {
+    margin-top: f.get_vw(-24);
+    margin-left: f.get_vw(38);
+    width: f.get_vw(158);
+    @include m.pc{
+      margin-top: f.get_vw(24, v.$pcMaxWidth);
+      margin-left: f.get_vw(34, v.$pcMaxWidth);
+      width: f.get_vw(158, v.$pcMaxWidth);
+    }
+
+    .profile-button__name {
+      bottom: f.get_vw(-14);
+      left: f.get_vw(33);
+      rotate: -7deg;
+      @include m.pc{
+        top: f.get_vw(-14, v.$pcMaxWidth);
+        left: f.get_vw(33, v.$pcMaxWidth);
+      }
+    }
+
+    .profile-button__opener {
+      bottom: f.get_vw(3);
+      right: f.get_vw(10);
+      @include m.pc{
+        bottom: f.get_vw(3, v.$pcMaxWidth);
+        right: f.get_vw(10, v.$pcMaxWidth);
+      }
+    }
+  }
+
+  &--KATSUKO {
+    margin-top: f.get_vw(24);
+    margin-right: f.get_vw(30);
+    width: f.get_vw(138);
+    @include m.pc{
+      margin-top: f.get_vw(24, v.$pcMaxWidth);
+      margin-left: f.get_vw(30, v.$pcMaxWidth);
+      width: f.get_vw(138, v.$pcMaxWidth);
+    }
+
+    .profile-button__name {
+      bottom: f.get_vw(4);
+      left: f.get_vw(-5);
+      rotate: 41deg;
+      @include m.pc{
+        bottom: f.get_vw(4, v.$pcMaxWidth);
+        left: f.get_vw(-5, v.$pcMaxWidth);
+      }
+    }
+
+    .profile-button__opener {
+      bottom: f.get_vw(3);
+      right: f.get_vw(10);
+      @include m.pc{
+        bottom: f.get_vw(3, v.$pcMaxWidth);
+        right: f.get_vw(10, v.$pcMaxWidth);
+      }
+    }
+  }
+
+}

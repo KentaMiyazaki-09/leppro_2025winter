@@ -1,0 +1,55 @@
+@use '../_mixin' as m;
+@use '../functions' as f;
+@use '../variables' as v;
+
+.profile {
+  padding: f.get_vw(30) 0 0;
+  margin-bottom: f.get_vw(40);
+  @include m.pc{
+    padding: f.get_vw(30, v.$pcMaxWidth) 0 0;
+    margin-bottom: f.get_vw(40, v.$pcMaxWidth);
+  }
+
+  &__ttl {
+    @include m.font_Shree;
+    rotate: 5deg;
+    padding-right: f.get_vw(30);
+    margin-bottom: f.get_vw(10);
+    @include m.pc{
+      padding-right: f.get_vw(30, v.$pcMaxWidth);
+      margin-bottom: f.get_vw(10, v.$pcMaxWidth);
+    }
+    &__text {
+      display: flex;
+      align-items: center;
+      line-height: 1;
+      justify-content: flex-end;
+      @include m.pc{
+        justify-content: center;
+        translate: -2em 0;
+      }
+      &__icon {
+        width: f.get_vw(20);
+        translate: 0 -0.2em;
+        @include m.pc{
+          width: f.get_vw(20, v.$pcMaxWidth);
+          translate: 0 0em;
+        }
+      }
+      &__primary {
+        @include m.fz_vw(16);
+        @include m.fz_vw_pc(16);
+        padding: 0 0.5em;
+      }
+    }
+  }
+
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    @include m.pc{
+      justify-content: center;
+    }
+  }
+}

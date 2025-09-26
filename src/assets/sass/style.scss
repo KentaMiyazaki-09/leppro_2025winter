@@ -7,6 +7,9 @@
 @use './_modules/_mv';
 @use './_modules/_intro';
 
+@use './_modules/_profile';
+@use './_modules/_profile-button';
+
 @use './_modules/_footer';
 
 .is-pc {

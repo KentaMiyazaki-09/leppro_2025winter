@@ -96,11 +96,16 @@
         margin-bottom: f.get_vw(30, v.$pcMaxWidth);
       }
       > span {
-        background: #DADEE8;
+        @include m.font_Shree;
+        background: linear-gradient(
+    transparent calc(100% - 1.8em),
+    #DADEE8 0
+  ) no-repeat;
+  background-position: 0 -0.25em;
         -webkit-box-decoration-break: clone;
         box-decoration-break: clone;
-        padding: .1em .25em;
-        line-height: 1.7;
+        padding: 0 .2em;
+        line-height: 1.5;
       }
     }
 
