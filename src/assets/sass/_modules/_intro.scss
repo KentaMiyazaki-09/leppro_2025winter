@@ -21,6 +21,9 @@
     position: relative;
     text-align: center;
     margin-bottom: f.get_vw(45);
+    @include m.pc{
+      margin-bottom: f.get_vw(45, v.$pcMaxWidth);
+    }
 
     &::after {
       content: "";
@@ -84,15 +87,48 @@
   }
 
   &__lead {
-    text-align: center;
+    &__ttl {
+      @include m.fz_vw(16);
+      @include m.fz_vw_pc(16);
+      text-align: center;
+      margin-bottom: f.get_vw(30);
+      @include m.pc{
+        margin-bottom: f.get_vw(30, v.$pcMaxWidth);
+      }
+      > span {
+        background: #DADEE8;
+        -webkit-box-decoration-break: clone;
+        box-decoration-break: clone;
+        padding: .1em .25em;
+        line-height: 1.7;
+      }
+    }
+
     > p {
+      text-align: center;
       @include m.fz_vw(12);
       @include m.fz_vw_pc(12);
+      letter-spacing: 0.03em;
       &:not(:last-child) {
         margin-bottom: f.get_vw(20);
         @include m.pc{
           margin-bottom: f.get_vw(20, v.$pcMaxWidth);
         }
+      }
+    }
+  }
+
+  &__gif {
+    margin-top: f.get_vw(40);
+    text-align: center;
+    @include m.pc{
+      margin-top: f.get_vw(40, v.$pcMaxWidth);
+    }
+    > img {
+      display: inline-block;
+      width: f.get_vw(208);
+      @include m.pc{
+        width: f.get_vw(208, v.$pcMaxWidth);
       }
     }
   }

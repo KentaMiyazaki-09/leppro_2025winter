@@ -2,7 +2,7 @@
 @use './variables' as v;
 
 body {
-  // @include m.font_ZenKaku;
+  @include m.font_ZenKaku;
   @include m.fz_vw(v.$basicFontSize);
   color: #232323;
   letter-spacing: 0.05em;
