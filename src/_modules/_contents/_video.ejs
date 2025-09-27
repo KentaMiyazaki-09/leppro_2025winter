@@ -1,17 +1,17 @@
 <div class="video">
 
   <div class="video__sound">
-    <p class="video__sound__ttl">SOUND</p>
+    <p class="video__sound__ttl">音声</p>
     <ul class="video__sound__btns">
       <li>
-        <button class="video__sound__btns__on video-soundon-button" type="button">ON</button>
+        <button class="video__sound__btns__on video-soundon-button" type="button">オン</button>
       </li>
       <li>
-        <button class="video__sound__btns__off video-soundoff-button is-active" type="button">OFF</button>
+        <button class="video__sound__btns__off video-soundoff-button is-active" type="button">オフ</button>
       </li>
     </ul>
   </div>
 
-  <video class="video__item" preload="metadata" src="<%= S3URL %>lepsim24_1.mp4" autoplay muted playsinline loop></video>
+  <video class="video__item" preload="metadata" src="<%= S3URL %><%= video %>" autoplay muted playsinline loop></video>
 
 </div>

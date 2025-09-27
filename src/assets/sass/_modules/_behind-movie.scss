@@ -1,0 +1,28 @@
+@use '../_mixin' as m;
+@use '../functions' as f;
+@use '../variables' as v;
+
+.behind-movie {
+  padding: f.get_vw(40) f.get_vw(20);
+  background-color: #F5C5CF;
+  @include m.pc{
+    padding: f.get_vw(40, v.$pcMaxWidth) f.get_vw(20, v.$pcMaxWidth);
+  }
+  &__heading {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: f.get_vw(30);
+    @include m.pc{
+      width: f.get_vw(400, v.$pcMaxWidth);
+      margin: 0 auto f.get_vw(30, v.$pcMaxWidth);
+    }
+  }
+
+  &__video-box {
+    width: f.get_vw(225);
+    margin: auto;
+    @include m.pc{
+      width: f.get_vw(225, v.$pcMaxWidth);
+    }
+  }
+}

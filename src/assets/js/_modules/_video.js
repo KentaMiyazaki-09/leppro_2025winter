@@ -7,13 +7,13 @@ export default () => {
     videoSoundonOnButton.addEventListener("click", (el) => {
       console.log();
       el.currentTarget.classList.add("is-active");
-      videoCloseButton.classList.remove("is-active");
+      videoSoundOffButton.classList.remove("is-active");
       video.muted = false;
     });
 
     videoSoundOffButton.addEventListener("click", (el) => {
       el.currentTarget.classList.add("is-active");
-      videoPlayButton.classList.remove("is-active");
+      videoSoundonOnButton.classList.remove("is-active");
       video.muted = true;
     });
   }

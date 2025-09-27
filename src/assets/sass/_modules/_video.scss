@@ -3,52 +3,64 @@
 @use '../variables' as v;
 
 .video {
-  background-color: v.$blue;
-  padding: 14% 17%;
-  @include m.pc{
-    padding: 6% 7% 14%;
-  }
+  width: 100%;
+  position: relative;
 
   &__sound {
+    white-space: nowrap;
     display: flex;
     align-items: center;
-    justify-content: center;
-    @include m.fz_vw(15);
+    @include m.fz_vw(12);
+    @include m.fz_vw_pc(12);
     line-height: 1;
-    margin-bottom: 10%;
-    padding-right: 11%;
-    @include m.pc{
-      margin-bottom: 4%;
-      padding-right: 5.5%;
-    }
+
+    z-index: 9;
+    position: absolute;
+    top: 25%;
+    left: 110%;
+    
+    width: 100%;
+    
+    rotate: 90deg;
+    transform-origin: 0% 100%;
+    translate: 0 0%;
+
     &__ttl {
-      margin-right: 12%;
+      position: relative;
+      margin-right: f.get_vw(50);
       @include m.pc{
-        margin-right: 4.5%;
+        margin-right: f.get_vw(50, v.$pcMaxWidth);
+      }
+      &::after {
+        content: "";
+        position: absolute;
+        top: 50%;
+        left: 160%;
+        width: 20px;
+        border: 1px dashed #333;
       }
     }
     &__btns {
       display: flex;
       > li {
-        position: relative;
-        &:not(:last-child) {
-          padding-right: 40%;
-          margin-right: 40%;
-          &::after {
-            content: "";
-            position: absolute;
-            top: -5%;
-            right: 0;
-            width: 0.5px;
-            height: 110%;
+        &:not(last-child) {
+          margin-right: f.get_vw(15);
+          @include m.pc{
+            margin-right: f.get_vw(15, v.$pcMaxWidth);
           }
         }
       }
 
       button {
-        opacity: 0.2;
+        border-radius: 50%;
+        padding: f.get_vw(6) f.get_vw(10);
+        border: 1px solid rgba(51, 51, 51, 0);
+        transition: border-color 0.5s ease;
+        @include m.pc{
+          padding: f.get_vw(6, v.$pcMaxWidth) f.get_vw(10, v.$pcMaxWidth);
+        }
         &.is-active {
-          opacity: 1;
+          border: 1px solid rgba(51, 51, 51, 1);
         }
       }
     }
