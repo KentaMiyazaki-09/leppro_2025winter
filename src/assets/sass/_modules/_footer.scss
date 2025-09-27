@@ -67,8 +67,8 @@
 
       > dt,
       > dd {
-        @include m.font_Shree;
         width: 50%;
+        @include m.font_Shree;
         @include m.fz_vw(11);
         @include m.fz_vw_pc(11);
       }

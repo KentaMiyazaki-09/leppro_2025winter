@@ -2,6 +2,8 @@
   const serverURL = '/static/docs/lepsim/pages/leppro_2025winter'
   const ENVType = process.env.NODE_ENV
   rootURL = ENVType === 'production' ? serverURL : ''
+
+  S3URL = 'https://movie.dot-st.com/static2/lepsim/2024autumn/'
 %>
 
 <% if(ENVType === 'development') {-%>

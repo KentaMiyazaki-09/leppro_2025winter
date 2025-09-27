@@ -1,0 +1,37 @@
+@use '../_mixin' as m;
+@use '../functions' as f;
+@use '../variables' as v;
+
+@keyframes marquee-scroll{
+  to { transform: translateX(-50%); } /* 自身幅の 50% = 画像1枚分だけ左へ */
+}
+
+.marquee{
+  --dur: 30s; /* 1周の時間 */
+
+  overflow: hidden;
+  position: relative;
+  line-height: 1;
+  height: f.get_vw(65);
+  @include m.pc{
+    height: f.get_vw(65, v.$pcMaxWidth);
+  }
+}
+
+.marquee__track{
+  display: flex;
+  height: 100%;
+  width: max-content;
+  will-change: transform;
+  animation: marquee-scroll var(--dur) linear infinite;
+
+  > p {
+    @include m.font_Shree;
+    @include m.fz_vw(25);
+    @include m.fz_vw_pc(25);
+    line-height: 1;
+    display: flex;
+    align-items: center;
+    padding-top: 0.1em;
+  }
+}

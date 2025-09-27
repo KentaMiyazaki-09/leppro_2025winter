@@ -1,0 +1,60 @@
+@use '../_mixin' as m;
+@use '../functions' as f;
+@use '../variables' as v;
+
+.video {
+  background-color: v.$blue;
+  padding: 14% 17%;
+  @include m.pc{
+    padding: 6% 7% 14%;
+  }
+
+  &__sound {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    @include m.fz_vw(15);
+    line-height: 1;
+    margin-bottom: 10%;
+    padding-right: 11%;
+    @include m.pc{
+      margin-bottom: 4%;
+      padding-right: 5.5%;
+    }
+    &__ttl {
+      margin-right: 12%;
+      @include m.pc{
+        margin-right: 4.5%;
+      }
+    }
+    &__btns {
+      display: flex;
+      > li {
+        position: relative;
+        &:not(:last-child) {
+          padding-right: 40%;
+          margin-right: 40%;
+          &::after {
+            content: "";
+            position: absolute;
+            top: -5%;
+            right: 0;
+            width: 0.5px;
+            height: 110%;
+          }
+        }
+      }
+
+      button {
+        opacity: 0.2;
+        &.is-active {
+          opacity: 1;
+        }
+      }
+    }
+  }
+
+  &__item {
+    width: 100%;
+  }
+}
