@@ -2,9 +2,10 @@
 
   <div class="item-slider__carousel embla">
     <div class="embla__container">
-      <% items.forEach(item => { %>
-      <div class="embla__slide"><img src="<%- rootURL %>/assets/img/item/<%- item %>" alt=""></div>
-      <% }) %>
+
+      <% for (let i = 1; i <= slider.count; i++) { %>
+      <div class="embla__slide"><img src="<%- rootURL %>/assets/img/item/<%- slider.type %>_<%- i %>.png" alt=""></div>
+      <% } %>
     </div>
   </div>
 

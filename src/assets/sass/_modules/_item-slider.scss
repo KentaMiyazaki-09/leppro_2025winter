@@ -4,22 +4,20 @@
 
 .item-slider {
   position: relative;
-  overflow: hidden;
-  @include m.pc{
-    display: inline-block;
-  }
+  display: inline-block;
 
   &__change-btn {
     z-index: 9;
     position: absolute;
     top: 0;
-    left: 0;
+    left: f.get_vw(-24);
     width: f.get_vw(67);
     aspect-ratio: 1/1;
     @include m.fz_vw(10);
     @include m.fz_vw_pc(10);
     @include m.pc{
       width: f.get_vw(67, v.$pcMaxWidth);
+      left: f.get_vw(-24, v.$pcMaxWidth);
     }
     &__arrow {
       z-index: 9;

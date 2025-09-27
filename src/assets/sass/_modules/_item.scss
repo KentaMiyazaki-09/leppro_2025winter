@@ -3,17 +3,21 @@
 @use '../variables' as v;
 
 .item {
-  padding: f.get_vw(20);
+  background-color: #EDF2E7;
+  padding: f.get_vw(20) f.get_vw(20) f.get_vw(40);
   @include m.pc{
-    padding: f.get_vw(20, v.$pcMaxWidth);
+    padding: f.get_vw(20, v.$pcMaxWidth) f.get_vw(20, v.$pcMaxWidth) f.get_vw(140, v.$pcMaxWidth);
   }
 
   &__slider-box {
+    width: 100%;
     text-align: center;
+    overflow: hidden;
   }
 
   &--outer {
-    background-color: #EDF2E7;
+  }
+  &--knit {
   }
 
   &__header {
@@ -71,17 +75,56 @@
     @include m.sp{
       display: flex;
       flex-wrap: wrap;
-      justify-content: center;
+      justify-content: space-between;
     }
     @include m.pc{
       position: relative;
     }
   }
 
+  &__link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: f.get_vw(20);
+    margin-bottom: f.get_vw(30);
+    @include m.pc{
+      margin-top: f.get_vw(20, v.$pcMaxWidth);
+      margin-bottom: f.get_vw(30, v.$pcMaxWidth);
+    }
+    > img {
+      width: f.get_vw(45);
+      @include m.pc{
+        width: f.get_vw(45, v.$pcMaxWidth);
+      }
+    }
+    > a {
+      @include m.fz_vw(17);
+      @include m.fz_vw_pc(17);
+      margin: 0 f.get_vw(15);
+      position: relative;
+      line-height: 1.3;
+      &::after {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 1px;
+        background-color: #232323;
+      }
+      @include m.pc{
+        margin: 0 f.get_vw(15, v.$pcMaxWidth);
+      }
+    }
+  }
+
   &__comment {
     width: f.get_vw(157);
     @include m.pc{
+      z-index: 9;
       position: absolute;
+      width: f.get_vw(170, v.$pcMaxWidth);
     }
     &__lead {
       @include m.fz_vw(10);
@@ -114,7 +157,8 @@
     &--310 {
       @include m.pc{
         top: 0;
-        left: 0;
+        left: 50%;
+        translate: f.get_vw(-350, v.$pcMaxWidth) 0;
       }
       .item__comment__lead {
          margin-bottom: f.get_vw(20);
@@ -137,9 +181,14 @@
       }
     }
     &--KATSUKO {
+      margin-top: f.get_vw(20);
+      @include m.pc{
+        margin-top: f.get_vw(20, v.$pcMaxWidth);
+        translate: f.get_vw(350, v.$pcMaxWidth) 0;
+      }
       @include m.pc{
         top: 0;
-        right: 0;
+        right: 50%;
       }
       .item__comment__lead {
          margin-bottom: f.get_vw(20);
@@ -164,7 +213,8 @@
     &--YUKIHA {
       @include m.pc{
         bottom: 0;
-        left: 0;
+        left: 50%;
+        translate: f.get_vw(-330, v.$pcMaxWidth) 0;
       }
       .item__comment__lead {
          margin-bottom: f.get_vw(15);
@@ -187,12 +237,15 @@
       }
     }
     &--MIWATARA {
+      margin-top: f.get_vw(15);
       @include m.pc{
+        margin-top: f.get_vw(15, v.$pcMaxWidth);
         bottom: 0;
-        right: 0;
+        right: 50%;
+        translate: f.get_vw(340, v.$pcMaxWidth) 0;
       }
       .item__comment__lead {
-         margin-bottom: f.get_vw(25);
+        margin-bottom: f.get_vw(25);
         @include m.pc{
           margin-bottom: f.get_vw(25, v.$pcMaxWidth);
         }

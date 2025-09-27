@@ -28,11 +28,13 @@
 
     <div class="item__slider-box">
       <%- include("./_item-slider.ejs", {
-        items: ["outer_1.png", "outer_2.png", "outer_3.png", "outer_4.png"]
+        sldier: slider,
       }) %>
 
-      <div>
-        <a href="/">DETAIL & BUY</a>
+      <div class="item__link">
+        <img src="<%- rootURL %>/assets/img/icon_handsign.png" alt="">
+        <a href="/" target="_blank" rel="noopener noreferrer">DETAIL & BUY</a>
+        <img src="<%- rootURL %>/assets/img/icon_handsign.png" alt="">
       </div>
     </div>
 
