@@ -1,0 +1,61 @@
+@use '../_mixin' as m;
+@use '../functions' as f;
+@use '../variables' as v;
+
+@keyframes marquee-scroll-looksMovie {
+  to { transform: translateX(-50%); } /* 自身幅の 50% = 画像1枚分だけ左へ */
+}
+
+.looks-movie {
+  padding: f.get_vw(40) f.get_vw(20);
+  background-color: #fff;
+  @include m.pc{
+    padding: f.get_vw(40, v.$pcMaxWidth) f.get_vw(20, v.$pcMaxWidth);
+  }
+
+  &__marquee {
+    --dur: 30s; /* 1周の時間 */
+    overflow: hidden;
+    position: relative;
+    line-height: 1;
+    padding-top: f.get_vw(20);
+    margin-bottom: f.get_vw(40);
+    border-top: 1.5px dashed #232323;
+    @include m.pc{
+      width: f.get_vw(800, v.$pcMaxWidth);
+      padding-top: f.get_vw(20, v.$pcMaxWidth);
+      margin: 0 auto f.get_vw(40, v.$pcMaxWidth);
+    }
+
+    &__track {
+      display: flex;
+      height: 100%;
+      width: max-content;
+      will-change: transform;
+      animation: marquee-scroll var(--dur) linear infinite;
+
+      > p {
+        @include m.font_Shree;
+        @include m.fz_vw(14);
+        @include m.fz_vw_pc(14);
+        line-height: 1;
+        letter-spacing: 0.1em;
+        display: flex;
+        align-items: center;
+        padding-top: 0.1em;
+        padding-right: f.get_vw(20);
+        @include m.pc{
+          padding-right: f.get_vw(20, v.$pcMaxWidth);
+        }
+      }
+    }
+  }
+
+  &__video-box {
+    width: f.get_vw(225);
+    margin: auto;
+    @include m.pc{
+      width: f.get_vw(225, v.$pcMaxWidth);
+    }
+  }
+}
