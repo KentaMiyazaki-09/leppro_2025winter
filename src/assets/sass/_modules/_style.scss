@@ -3,9 +3,9 @@
 @use '../variables' as v;
 
 .style {
-  padding: f.get_vw(40) 0;
+  padding: f.get_vw(40) 0 0;
   @include m.pc{
-    padding: f.get_vw(40, v.$pcMaxWidth) 0;
+    padding: f.get_vw(40, v.$pcMaxWidth) 0 0;
   }
   &__inner {
 
@@ -22,8 +22,9 @@
       @include m.font_Shree;
       @include m.fz_vw(16);
       @include m.fz_vw_pc(16);
-      margin-bottom: f.get_vw(15);
+      letter-spacing: 0.16em;
       line-height: 1;
+      margin-bottom: f.get_vw(15);
       @include m.pc{
         margin-bottom: f.get_vw(15, v.$pcMaxWidth);
       }
@@ -100,19 +101,41 @@
   }
 
   &__concept {
+    z-index: 9;
     text-align: center;
+    position: relative;
+    padding-bottom: f.get_vw(40);
+    @include m.pc{
+      padding-bottom: f.get_vw(40, v.$pcMaxWidth);
+    }
     &__lead {
-      margin-bottom: f.get_vw(10);
-      @include m.pc{
-        margin-bottom: f.get_vw(10, v.$pcMaxWidth);
-      }
     }
     &__arrow {
+      font-size: 0;
+      line-height: 1;
       width: f.get_vw(254);
+      position: absolute;
+      top: 70%;
+      left: 0;
+      right: 0;
       margin: auto;
       @include m.pc{
         width: f.get_vw(254, v.$pcMaxWidth);
       }
+    }
+  }
+
+  &__list-wrapper {
+    background-color: #fff;
+    padding: f.get_vw(50) f.get_vw(20);
+    @include m.pc{
+      padding: f.get_vw(100, v.$pcMaxWidth) 0 f.get_vw(20, v.$pcMaxWidth) 0;
+    }
+  }
+  &__list-inner {
+    @include m.pc{
+      width: f.get_vw(690, v.$pcMaxWidth);
+      margin: auto;
     }
   }
 

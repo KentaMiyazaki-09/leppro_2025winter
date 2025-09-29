@@ -1,0 +1,38 @@
+<%
+  const styleList = [
+    {
+      type: "CASUAL",
+      name: "KATSUKO",
+    },
+    {
+      type: "TRENDY",
+      name: "YUKIHA",
+    },
+    {
+      type: "DAILY",
+      name: "310",
+    },
+    {
+      type: "COLOR",
+      name: "MIWATARA",
+    },
+  ]
+%>
+
+<ul class="style-list">
+  <% styleList.forEach(element => { %>
+  <li class="style-list__item style-list__item--<%- element.type %>">
+    <div class="style-list__circle"></div>
+    <h3 class="style-list__type"><%- element.type %></h3>
+    <div class="style-list__thumb">
+      <img src="<%- rootURL %>/assets/img/style/thumb_<%- element.name %>_1.jpg" alt="">
+    </div>
+    <div class="style-list__bottom">
+      <p class="style-list__bottom__name">BY_<%- element.name %></p>
+      <button type="button" data-profile="<%- element.name %>" class="style-list__bottom__opener">
+        <img class="profile-button__opener__plus-icon" src="<%- rootURL %>/assets/img/icon_plus_black.svg" alt="">
+      </button>
+    </div>
+  </li>
+  <% }) %>
+</ul>
