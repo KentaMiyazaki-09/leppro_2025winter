@@ -1,15 +1,19 @@
 @use '../_mixin' as m;
+@use '../functions' as f;
 @use '../variables' as v;
 
 .mv {
-  padding: 2.3%;
+  padding: f.get_vw(10);
+  background-color: #fff;
+  @include m.pc{
+    padding: f.get_vw(100, v.$pcMaxWidth) f.get_vw(20, v.$pcMaxWidth);
+  }
+
   &__inner {
     position: relative;
-    width: 81.5%;
-    margin: auto;
   }
   &__ttl {
-    width: 40%;
+    width: f.get_vw(200);
     margin: auto;
     font-size: 0;
     line-height: 1;
@@ -17,12 +21,13 @@
     @include m.sp{
       z-index: 9;
       position: absolute;
-      top: 4%;
+      top: f.get_vw(30);
       left: 0;
       right: 0;
     }
     @include m.pc{
-      margin-bottom: 10%;
+      width: f.get_vw(300, v.$pcMaxWidth);
+      margin-bottom: f.get_vw(100, v.$pcMaxWidth);
     }
   }
 
@@ -30,23 +35,22 @@
     font-size: 0;
     line-height: 1;
 
-    overflow: hidden;
-    .embla__container {
-      display: flex;
-    }
-    .embla__slide {
-      @include m.sp{
-        flex: 0 0 100%;
-        min-width: 0;
+    &__container {
+      @include m.pc{
+        position: relative;
+        display: flex;
+        width: f.get_vw(1065, v.$pcMaxWidth);
+        margin: 0 auto f.get_vw(150, v.$pcMaxWidth);
       }
     }
 
     &__label {
+      @include m.font_Shree_normal;
       &--sp {
         z-index: 9;
         position: absolute;
         top: 50%;
-        right: 5%;
+        right: 3%;
 
         @include m.fz_vw(11);
         color: #fff;
@@ -56,28 +60,48 @@
         transform-origin: 100% 0;
         transform: rotate(90deg) translateX(50%);
       }
+      &--pc {
+        z-index: 9;
+        position: absolute;
+        color: #232323;
+        @include m.fz_vw_pc(13);
+        line-height:1;
+        &-1 {
+          top: -1em;
+          left: 50%;
+          translate: f.get_vw(110, v.$pcMaxWidth) f.get_vw(-10, v.$pcMaxWidth);
+        }
+        &-2 {
+          bottom: -1em;
+          right: 50%;
+          translate: f.get_vw(-160, v.$pcMaxWidth) f.get_vw(15, v.$pcMaxWidth);
+        }
+      }
     }
   }
 
   &__logo-lepsim {
-    width: 30%;
+    width: f.get_vw(90);
+    font-size: 0;
+    line-height: 1;
+    @include m.sp{
+      position: absolute;
+      bottom: f.get_vw(20);
+      left: 0;
+      right: 0;
+    }
+    @include m.pc{
+      bottom: f.get_vw(20, v.$pcMaxWidth);
+      width: f.get_vw(120, v.$pcMaxWidth);
+    }
     margin: auto;
     > svg {
-      font-size: 0;
-      line-height: 1;
       path {
         fill: white;
         @include m.pc{
           fill: black;
         }
       }
-    }
-
-    @include m.sp{
-      position: absolute;
-      bottom: 0;
-      left: 0;
-      right: 0;
     }
   }
 }
