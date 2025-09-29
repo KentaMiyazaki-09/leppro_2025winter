@@ -1,0 +1,119 @@
+@use '../_mixin' as m;
+@use '../functions' as f;
+@use '../variables' as v;
+
+.style {
+  padding: f.get_vw(40) 0;
+  @include m.pc{
+    padding: f.get_vw(40, v.$pcMaxWidth) 0;
+  }
+  &__inner {
+
+  }
+
+  &__heading {
+    text-align: center;
+    margin-bottom: f.get_vw(30);
+    @include m.pc{
+      margin-bottom: f.get_vw(30, v.$pcMaxWidth);
+    }
+
+    &__en {
+      @include m.font_Shree;
+      @include m.fz_vw(16);
+      @include m.fz_vw_pc(16);
+      margin-bottom: f.get_vw(15);
+      line-height: 1;
+      @include m.pc{
+        margin-bottom: f.get_vw(15, v.$pcMaxWidth);
+      }
+    }
+    &__ja {
+      @include m.fz_vw(20);
+      @include m.fz_vw_pc(20);
+      line-height: 1;
+    }
+  }
+
+  &__mv {
+    font-size: 0;
+    line-height: 1;
+    
+    position: relative;
+    display: flex;
+    align-items: center;
+    height: f.get_vw(345);
+    margin-bottom: f.get_vw(25);
+    @include m.pc{
+      height: f.get_vw(345, v.$pcMaxWidth);
+      margin-bottom: f.get_vw(25, v.$pcMaxWidth);
+    }
+
+    @keyframes marquee-scroll{
+      to { transform: translateX(-50%); } /* 自身幅の 50% = 画像1枚分だけ左へ */
+    }
+  
+    &__marquee{
+      z-index: 10;
+      --dur: 30s; /* 1周の時間 */
+  
+      overflow: hidden;
+      position: relative;
+      line-height: 1;
+      height: f.get_vw(225);
+      @include m.pc{
+        width: f.get_vw(800, v.$pcMaxWidth);
+        height: f.get_vw(225, v.$pcMaxWidth);
+        margin: auto;
+      }
+    }
+  
+    &__track{
+      display: flex;
+      height: 100%;
+      width: max-content;
+      will-change: transform;
+      animation: marquee-scroll var(--dur) linear infinite;
+    }
+    &__item {
+      line-height: 1;
+      flex: 1 1 auto;
+
+      > img {
+        height: 100%;
+      }
+    }
+
+    &__bg {
+      position: absolute;
+      top: 0;
+      left: 20px;
+      width: calc(100% - 40px);
+      height: auto;
+      @include m.pc{
+        width: f.get_vw(330, v.$pcMaxWidth);
+        left: 0;
+        right: 0;
+        margin: auto;
+      }
+    }
+  }
+
+  &__concept {
+    text-align: center;
+    &__lead {
+      margin-bottom: f.get_vw(10);
+      @include m.pc{
+        margin-bottom: f.get_vw(10, v.$pcMaxWidth);
+      }
+    }
+    &__arrow {
+      width: f.get_vw(254);
+      margin: auto;
+      @include m.pc{
+        width: f.get_vw(254, v.$pcMaxWidth);
+      }
+    }
+  }
+
+}
