@@ -31,11 +31,9 @@
         sldier: slider,
       }) %>
 
-      <div class="item__link">
-        <img src="<%- rootURL %>/assets/img/icon_handsign.png" alt="">
-        <a href="/" target="_blank" rel="noopener noreferrer">DETAIL & BUY</a>
-        <img src="<%- rootURL %>/assets/img/icon_handsign.png" alt="">
-      </div>
+      <%- include("./_checkout-link.ejs", {
+        link: "/"
+      }) %>
     </div>
 
     <% const comment3to4 = commentList.slice(2, 4) %>

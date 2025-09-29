@@ -1,0 +1,182 @@
+<%
+  const styleList = [
+    {
+      type: "CASUAL",
+      name: "KATSUKO",
+      listCount: 3,
+      linkList: [
+        [
+          { link: "/", name: "Knit", price: "5,990"},
+          { link: "/", name: "Knit", price: "5,990"},
+          { link: "/", name: "Knit", price: "5,990"},
+          { link: "/", name: "Knit", price: "5,990"},
+          { link: "/", name: "Knit", price: "5,990"},
+        ],
+        [
+          { link: "/", name: "Knit", price: "5,990"},
+          { link: "/", name: "Knit", price: "5,990"},
+          { link: "/", name: "Knit", price: "5,990"},
+          { link: "/", name: "Knit", price: "5,990"},
+        ],
+        [
+          { link: "/", name: "Knit", price: "5,990"},
+          { link: "/", name: "Knit", price: "5,990"},
+          { link: "/", name: "Knit", price: "5,990"},
+        ],
+      ],
+      checkoutLink: "/",
+    },
+    {
+      type: "DAILY",
+      name: "310",
+      listCount: 3,
+      linkList: [
+        [
+          { link: "/", name: "Knit", price: "5,990"},
+          { link: "/", name: "Knit", price: "5,990"},
+          { link: "/", name: "Knit", price: "5,990"},
+          { link: "/", name: "Knit", price: "5,990"},
+          { link: "/", name: "Knit", price: "5,990"},
+        ],
+        [
+          { link: "/", name: "Knit", price: "5,990"},
+          { link: "/", name: "Knit", price: "5,990"},
+          { link: "/", name: "Knit", price: "5,990"},
+          { link: "/", name: "Knit", price: "5,990"},
+        ],
+        [
+          { link: "/", name: "Knit", price: "5,990"},
+          { link: "/", name: "Knit", price: "5,990"},
+          { link: "/", name: "Knit", price: "5,990"},
+        ],
+      ],
+      checkoutLink: "/",
+    },
+    {
+      type: "TRENDY",
+      name: "YUKIHA",
+      listCount: 3,
+      linkList: [
+        [
+          { link: "/", name: "Knit", price: "5,990"},
+          { link: "/", name: "Knit", price: "5,990"},
+          { link: "/", name: "Knit", price: "5,990"},
+          { link: "/", name: "Knit", price: "5,990"},
+          { link: "/", name: "Knit", price: "5,990"},
+        ],
+        [
+          { link: "/", name: "Knit", price: "5,990"},
+          { link: "/", name: "Knit", price: "5,990"},
+          { link: "/", name: "Knit", price: "5,990"},
+          { link: "/", name: "Knit", price: "5,990"},
+        ],
+        [
+          { link: "/", name: "Knit", price: "5,990"},
+          { link: "/", name: "Knit", price: "5,990"},
+          { link: "/", name: "Knit", price: "5,990"},
+        ],
+      ],
+      checkoutLink: "/",
+    },
+    {
+      type: "COLOR",
+      name: "MIWATARA",
+      listCount: 5,
+      linkList: [
+        [
+          { link: "/", name: "Knit", price: "5,990"},
+          { link: "/", name: "Knit", price: "5,990"},
+          { link: "/", name: "Knit", price: "5,990"},
+          { link: "/", name: "Knit", price: "5,990"},
+          { link: "/", name: "Knit", price: "5,990"},
+        ],
+        [
+          { link: "/", name: "Knit", price: "5,990"},
+          { link: "/", name: "Knit", price: "5,990"},
+          { link: "/", name: "Knit", price: "5,990"},
+          { link: "/", name: "Knit", price: "5,990"},
+        ],
+        [
+          { link: "/", name: "Knit", price: "5,990"},
+          { link: "/", name: "Knit", price: "5,990"},
+          { link: "/", name: "Knit", price: "5,990"},
+        ],
+        [
+          { link: "/", name: "Knit", price: "5,990"},
+          { link: "/", name: "Knit", price: "5,990"},
+          { link: "/", name: "Knit", price: "5,990"},
+          { link: "/", name: "Knit", price: "5,990"},
+          { link: "/", name: "Knit", price: "5,990"},
+        ],
+        [
+          { link: "/", name: "Knit", price: "5,990"},
+          { link: "/", name: "Knit", price: "5,990"},
+          { link: "/", name: "Knit", price: "5,990"},
+          { link: "/", name: "Knit", price: "5,990"},
+        ],
+      ],
+      checkoutLink: "/",
+    },
+  ]
+%>
+
+<% styleList.forEach(element => { %>
+  <div id="style-modal-<%- element.name %>" class="style-modal style-modal--<%- element.name %> has-active">
+  
+    <div class="style-modal__container">
+  
+      <div class="style-modal__contents">
+
+        <div class="style-modal__head">
+          <div class="style-modal__head__type">
+            <p><%- element.type %></p>
+            <div class="style-modal__head__type__circle"></div>
+          </div>
+          <p>BY_<%- element.name %></p>
+        </div>
+
+        <div class="style-modal__slider embla">
+          <div class="embla__container">
+            <% for (let i = 1; i <= element.listCount; i++) { %>
+            <div class="embla__slide"><img src="<%- rootURL %>/assets/img/style/<%- element.name %>/<%- i %>.jpg" alt=""></div>
+            <% } %>
+          </div>
+        </div>
+
+        <p class="style-modal__count">
+          <span class="style-modal__count__arrow"><</span>
+          <span class="style-modal__count__center">
+
+            <span class="style-modal__count__center__current">1</span> / <%- element.listCount %>
+
+          </span>
+          <span class="style-modal__count__arrow">></span>
+        </p>
+
+        <div class="style-modal__info embla">
+          <div class="embla__container">
+            <% element.linkList.forEach(linkItems => { %>
+            <div class="embla__slide">
+              <ul class="style-modal__info__list">
+                <% linkItems.forEach(link => { %>
+                <li><a href="<%- link.link %>" target="_blank" rel="noopener noreferrer"><%- link.name %> &yen;<%- link.price %></a></li>
+                <% }) %>
+              </ul>
+            </div>
+            <% }) %>
+          </div>
+        </div>
+
+        <%- include("./_checkout-link.ejs", {
+          link: element.checkoutLink
+        }) %>
+
+        <button type="button" class="style-modal__close">
+          <img src="<%- rootURL %>/assets/img/icon_close.svg" alt="">
+        </button>
+      </div>
+  
+    </div>
+  
+  </div>
+<% }) %>
