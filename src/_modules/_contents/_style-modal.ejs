@@ -2,6 +2,7 @@
   const styleList = [
     {
       type: "CASUAL",
+      circleColor: "blue",
       name: "KATSUKO",
       listCount: 3,
       linkList: [
@@ -28,6 +29,7 @@
     },
     {
       type: "DAILY",
+      circleColor: "orange",
       name: "310",
       listCount: 3,
       linkList: [
@@ -54,6 +56,7 @@
     },
     {
       type: "TRENDY",
+      circleColor: "yellow",
       name: "YUKIHA",
       listCount: 3,
       linkList: [
@@ -80,6 +83,7 @@
     },
     {
       type: "COLOR",
+      circleColor: "green",
       name: "MIWATARA",
       listCount: 5,
       linkList: [
@@ -130,7 +134,12 @@
         <div class="style-modal__head">
           <div class="style-modal__head__type">
             <p><%- element.type %></p>
-            <div class="style-modal__head__type__circle"></div>
+            <%
+              const classNameCircle = `circle--style-modal-head circle--${element.circleColor}`
+            %>
+            <%- include("./_circle.ejs", {
+              className: classNameCircle,
+            }) %>
           </div>
           <p>BY_<%- element.name %></p>
         </div>
@@ -166,10 +175,6 @@
             <% }) %>
           </div>
         </div>
-
-        <%- include("./_checkout-link.ejs", {
-          link: element.checkoutLink
-        }) %>
 
         <button type="button" class="style-modal__close">
           <img src="<%- rootURL %>/assets/img/icon_close.svg" alt="">

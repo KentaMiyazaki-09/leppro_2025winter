@@ -18,6 +18,21 @@
     position: absolute;
   }
 
+  &--style-modal-head {
+    position: absolute;
+    top: f.get_vw(-15);
+    right: f.get_vw(-25);
+    width: f.get_vw(20);
+    height: auto;
+    aspect-ratio: 1/1;
+    border-radius: 50%;
+    @include m.pc{
+      top: f.get_vw(-15, v.$pcMaxWidth);
+      right: f.get_vw(-25, v.$pcMaxWidth);
+      width: f.get_vw(20, v.$pcMaxWidth);
+    }
+  }
+
   &--blue {
     background-color: v.$blue;
   }
