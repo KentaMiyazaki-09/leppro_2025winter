@@ -16,6 +16,13 @@
       width: f.get_vw(400, v.$pcMaxWidth);
       margin: 0 auto f.get_vw(30, v.$pcMaxWidth);
     }
+
+    &__en {
+      @include m.font_Shree;
+      @include m.fz_vw(14);
+      @include m.fz_vw_pc(14);
+      letter-spacing: 0.2em;
+    }
   }
 
   &__video-box {
