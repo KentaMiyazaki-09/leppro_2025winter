@@ -27,10 +27,9 @@
   &__item {
     position: relative;
     &--CASUAL {
-      .style-list__circle {
+      .circle {
         top: f.get_vw(13);
         left: f.get_vw(17);
-        background-color: v.$blue;
         @include m.pc{
           top: f.get_vw(13, v.$pcMaxWidth);
           left: f.get_vw(17, v.$pcMaxWidth);
@@ -38,10 +37,9 @@
       }
     }
     &--TRENDY {
-      .style-list__circle {
+      .circle {
         top: f.get_vw(-20);
         right: f.get_vw(13);
-        background-color: v.$yellow;
         @include m.pc{
           top: f.get_vw(-20, v.$pcMaxWidth);
           right: f.get_vw(13, v.$pcMaxWidth);
@@ -49,10 +47,9 @@
       }
     }
     &--DAILY {
-      .style-list__circle {
+      .circle {
         top: f.get_vw(15);
         right: f.get_vw(23);
-        background-color: v.$orange;
         @include m.pc{
           top: f.get_vw(-20, v.$pcMaxWidth);
           right: f.get_vw(23, v.$pcMaxWidth);
@@ -60,29 +57,14 @@
       }
     }
     &--COLOR {
-      .style-list__circle {
+      .circle {
         top: f.get_vw(-12);
         left: f.get_vw(21);
-        background-color: v.$green;
         @include m.pc{
           top: f.get_vw(-12, v.$pcMaxWidth);
           left: f.get_vw(21, v.$pcMaxWidth);
         }
       }
-    }
-  }
-
-  &__circle {
-    z-index: 9;
-    position: absolute;
-    border-radius: 50%;
-    line-height: 1;
-    font-size: 0;
-    background-color: #fff;
-    width: f.get_vw(20);
-    aspect-ratio: 1/1;
-    @include m.pc{
-      width: f.get_vw(20, v.$pcMaxWidth);
     }
   }
 

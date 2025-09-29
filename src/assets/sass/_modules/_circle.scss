@@ -1,0 +1,33 @@
+@use '../_mixin' as m;
+@use '../functions' as f;
+@use '../variables' as v;
+
+.circle {
+  border-radius: 50%;
+  line-height: 1;
+  font-size: 0;
+  background-color: #fff;
+  width: f.get_vw(20);
+  aspect-ratio: 1/1;
+  @include m.pc{
+    width: f.get_vw(20, v.$pcMaxWidth);
+  }
+
+  &--style-list {
+    z-index: 9;
+    position: absolute;
+  }
+
+  &--blue {
+    background-color: v.$blue;
+  }
+  &--yellow {
+    background-color: v.$yellow;
+  }
+  &--orange {
+    background-color: v.$orange;
+  }
+  &--green {
+    background-color: v.$green;
+  }
+}

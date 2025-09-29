@@ -3,18 +3,22 @@
     {
       type: "CASUAL",
       name: "KATSUKO",
+      circleColor: "blue",
     },
     {
       type: "TRENDY",
       name: "YUKIHA",
+      circleColor: "yellow",
     },
     {
       type: "DAILY",
       name: "310",
+      circleColor: "orange",
     },
     {
       type: "COLOR",
       name: "MIWATARA",
+      circleColor: "green",
     },
   ]
 %>
@@ -22,7 +26,12 @@
 <ul class="style-list">
   <% styleList.forEach(element => { %>
   <li class="style-list__item style-list__item--<%- element.type %>">
-    <div class="style-list__circle"></div>
+    <%
+      const classNameCircle = `circle--style-list circle--${element.circleColor}`
+    %>
+    <%- include("./_circle.ejs", {
+      className: classNameCircle,
+    }) %>
     <h3 class="style-list__type"><%- element.type %></h3>
     <div class="style-list__thumb">
       <img src="<%- rootURL %>/assets/img/style/thumb_<%- element.name %>_1.jpg" alt="">
