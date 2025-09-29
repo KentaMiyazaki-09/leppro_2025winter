@@ -6,8 +6,8 @@
   padding: f.get_vw(30) 0 0;
   margin-bottom: f.get_vw(40);
   @include m.pc{
-    padding: f.get_vw(30, v.$pcMaxWidth) 0 0;
-    margin-bottom: f.get_vw(40, v.$pcMaxWidth);
+    padding: f.get_vw(50, v.$pcMaxWidth) 0 0;
+    margin-bottom: f.get_vw(50, v.$pcMaxWidth);
   }
 
   &__ttl {

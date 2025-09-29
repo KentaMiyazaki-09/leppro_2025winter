@@ -13,8 +13,8 @@ export default () => {
 
   // モーダルclose
   document.querySelectorAll(".profile-modal__close").forEach((btn) => {
-    document.querySelector("body").style.overflow = "auto";
     btn.addEventListener("click", function () {
+      document.querySelector("body").style.overflow = "auto";
       this.closest(".profile-modal").classList.remove("active");
     });
   });

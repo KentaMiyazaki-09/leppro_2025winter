@@ -90,6 +90,9 @@
           flex: 1 1 auto;
           height: 0;
           transform: translateX(0em);
+          @include m.pc{
+            border-bottom-width: 0.5px;
+          }
         }
       }
     }

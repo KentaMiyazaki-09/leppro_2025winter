@@ -11,6 +11,10 @@ body {
   font-style: normal;
 
   background: url(../img/bg_dot_pattern.png) repeat 0 0 / 50px 50px;
+
+  @include m.pc{
+    background-size: 25px 25px;
+  }
 }
 
 svg {

@@ -23,6 +23,7 @@
     background-color: #fff;
     width: f.get_vw(32);
     @include m.pc{
+      border-width: 0.5px;
       width: f.get_vw(32, v.$pcMaxWidth);
     }
     &__plus-icon {
