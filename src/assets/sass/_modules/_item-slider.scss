@@ -5,34 +5,48 @@
 .item-slider {
   position: relative;
   display: inline-block;
+  margin-bottom: f.get_vw(15);
+  @include m.pc{
+    margin-bottom: f.get_vw(15, v.$pcMaxWidth);
+  }
 
   &__change-btn {
     z-index: 9;
     position: absolute;
-    top: 0;
-    left: f.get_vw(-24);
-    width: f.get_vw(67);
+    top: f.get_vw(14);
+    left: f.get_vw(-30);
+    width: f.get_vw(68);
     aspect-ratio: 1/1;
-    @include m.fz_vw(10);
-    @include m.fz_vw_pc(10);
+    padding-top: f.get_vw(2);
     @include m.pc{
-      width: f.get_vw(67, v.$pcMaxWidth);
-      left: f.get_vw(-24, v.$pcMaxWidth);
+      padding-top: f.get_vw(2, v.$pcMaxWidth);
+      top: f.get_vw(14, v.$pcMaxWidth);
+      left: f.get_vw(-30, v.$pcMaxWidth);
+      width: f.get_vw(68, v.$pcMaxWidth);
     }
     &__arrow {
       z-index: 9;
       position: relative;
       display: block;
-      margin: f.get_vw(9) auto 0;
-      width: f.get_vw(21);
+      line-height: 1;
+      margin: f.get_vw(4) auto 0;
+      width: f.get_vw(23);
       @include m.pc{
-        width: f.get_vw(21, v.$pcMaxWidth);
-        margin-top: f.get_vw(9, v.$pcMaxWidth);
+        width: f.get_vw(23, v.$pcMaxWidth);
+        margin-top: f.get_vw(4, v.$pcMaxWidth);
       }
     }
     &__text {
       z-index: 9;
       position: relative;
+      font-size: 0;
+      line-height: 1;
+      &__custom {
+        width: 62%;
+      }
+      &__item {
+        width: 62%;
+      }
     }
     &__bg {
       font-size: 0;

@@ -22,7 +22,7 @@
       @include m.font_Shree;
       @include m.fz_vw(16);
       @include m.fz_vw_pc(16);
-      letter-spacing: 0.16em;
+      letter-spacing: 0.2em;
       line-height: 1;
       margin-bottom: f.get_vw(15);
       @include m.pc{
@@ -33,6 +33,7 @@
       @include m.fz_vw(20);
       @include m.fz_vw_pc(20);
       line-height: 1;
+      letter-spacing: 0.1em;
     }
   }
 
@@ -88,8 +89,8 @@
     &__bg {
       position: absolute;
       top: 0;
-      left: 20px;
-      width: calc(100% - 40px);
+      left: 23px;
+      width: calc(100% - 45px);
       height: auto;
       @include m.pc{
         width: f.get_vw(330, v.$pcMaxWidth);
@@ -108,26 +109,24 @@
     @include m.pc{
       padding-bottom: f.get_vw(40, v.$pcMaxWidth);
     }
-    &__lead {
-    }
     &__arrow {
       font-size: 0;
       line-height: 1;
-      width: f.get_vw(254);
+      width: f.get_vw(257);
       position: absolute;
-      top: 70%;
-      left: 0;
+      top: 72%;
+      left: -4%;
       right: 0;
       margin: auto;
       @include m.pc{
-        width: f.get_vw(254, v.$pcMaxWidth);
+        width: f.get_vw(257, v.$pcMaxWidth);
       }
     }
   }
 
   &__list-wrapper {
     background-color: #fff;
-    padding: f.get_vw(50) f.get_vw(20);
+    padding: f.get_vw(50) f.get_vw(20) 0;
     @include m.pc{
       padding: f.get_vw(100, v.$pcMaxWidth) 0 f.get_vw(20, v.$pcMaxWidth) 0;
     }

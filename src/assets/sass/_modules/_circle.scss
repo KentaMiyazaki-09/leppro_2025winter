@@ -21,15 +21,15 @@
       width: f.get_vw(32, v.$pcMaxWidth);
     }
     &-1 {
-      top: f.get_vw(-10);
-      left: f.get_vw(10);
+      top: f.get_vw(-12);
+      left: f.get_vw(16);
       @include m.pc{
         top: f.get_vw(0, v.$pcMaxWidth);
         left: f.get_vw(-40, v.$pcMaxWidth);
       }
     }
     &-2 {
-      top: f.get_vw(40);
+      top: f.get_vw(50);
       right: f.get_vw(-25);
       @include m.pc{
         top: f.get_vw(90, v.$pcMaxWidth);
@@ -60,42 +60,42 @@
 
   &--mv-gourp-1-1 {
     margin-left: f.get_vw(5);
-    margin-bottom: f.get_vw(35);
+    margin-bottom: f.get_vw(30);
     @include m.pc{
       margin-left: f.get_vw(5, v.$pcMaxWidth);
-      margin-bottom: f.get_vw(35, v.$pcMaxWidth);
+      margin-bottom: f.get_vw(30, v.$pcMaxWidth);
     }
   }
   &--mv-gourp-1-2 {
-    margin-left: f.get_vw(-5);
+    margin-left: f.get_vw(0);
     @include m.pc{
-      margin-left: f.get_vw(-5, v.$pcMaxWidth);
+      margin-left: f.get_vw(0, v.$pcMaxWidth);
     }
   }
   &--mv-gourp-1-3 {
-    margin-top: f.get_vw(-5);
-    margin-left: f.get_vw(0);
+    margin-top: f.get_vw(-3);
+    margin-left: f.get_vw(2);
     @include m.pc{
-      margin-top: f.get_vw(-5, v.$pcMaxWidth);
-      margin-left: f.get_vw(0, v.$pcMaxWidth);
+      margin-top: f.get_vw(-3, v.$pcMaxWidth);
+      margin-left: f.get_vw(2, v.$pcMaxWidth);
     }
   }
   &--mv-gourp-1-4 {
     position: absolute;
-    bottom: f.get_vw(7);
-    right: f.get_vw(-30);
+    bottom: f.get_vw(6);
+    right: f.get_vw(-33);
     @include m.pc{
-      bottom: f.get_vw(7, v.$pcMaxWidth);
-      right: f.get_vw(-30, v.$pcMaxWidth);
+      bottom: f.get_vw(6, v.$pcMaxWidth);
+      right: f.get_vw(-33, v.$pcMaxWidth);
     }
   }
 
   &--mv-gourp-2-1 {
-    translate: f.get_vw(-25) 0;
-    margin-bottom: f.get_vw(5);
+    translate: f.get_vw(-30) 0;
+    margin-bottom: f.get_vw(0);
     @include m.pc{
-      translate: f.get_vw(-25, v.$pcMaxWidth) 0;
-      margin-bottom: f.get_vw(5, v.$pcMaxWidth);
+      translate: f.get_vw(-30, v.$pcMaxWidth) 0;
+      margin-bottom: f.get_vw(0, v.$pcMaxWidth);
     }
   }
   &--mv-gourp-2-2 {
@@ -107,19 +107,19 @@
     }
   }
   &--mv-gourp-2-3 {
-    margin-top: f.get_vw(-6);
-    margin-bottom: f.get_vw(20);
-    translate: f.get_vw(-7) 0;
+    margin-top: f.get_vw(-5);
+    margin-bottom: f.get_vw(10);
+    translate: f.get_vw(-10) 0;
     @include m.pc{
-      margin-top: f.get_vw(-6, v.$pcMaxWidth);
-      margin-bottom: f.get_vw(20, v.$pcMaxWidth);
-      translate: f.get_vw(-7, v.$pcMaxWidth) 0;
+      margin-top: f.get_vw(-5, v.$pcMaxWidth);
+      margin-bottom: f.get_vw(10, v.$pcMaxWidth);
+      translate: f.get_vw(-10, v.$pcMaxWidth) 0;
     }
   }
   &--mv-gourp-2-4 {
-    translate: f.get_vw(-40) 0;
+    translate: f.get_vw(-50) 0;
     @include m.pc{
-      translate: f.get_vw(-40, v.$pcMaxWidth) 0;
+      translate: f.get_vw(-50, v.$pcMaxWidth) 0;
     }
   }
 
@@ -132,35 +132,35 @@
       width: f.get_vw(20, v.$pcMaxWidth);
     }
     &--1 {
-      top: f.get_vw(30);
-      left: f.get_vw(-40);
+      top: f.get_vw(32);
+      left: f.get_vw(-49);
       @include m.pc{
-        top: f.get_vw(30, v.$pcMaxWidth);
-        left: f.get_vw(-40, v.$pcMaxWidth);
+        top: f.get_vw(32, v.$pcMaxWidth);
+        left: f.get_vw(-49, v.$pcMaxWidth);
       }
     }
     &--2 {
-      top: f.get_vw(50);
-      left: f.get_vw(-10);
+      top: f.get_vw(52);
+      left: f.get_vw(-19);
       @include m.pc{
-        top: f.get_vw(50, v.$pcMaxWidth);
-        left: f.get_vw(-10, v.$pcMaxWidth);
+        top: f.get_vw(52, v.$pcMaxWidth);
+        left: f.get_vw(-19, v.$pcMaxWidth);
       }
     }
     &--3 {
-      top: f.get_vw(60);
-      left: f.get_vw(-20);
+      top: f.get_vw(66);
+      left: f.get_vw(-29);
       @include m.pc{
-        top: f.get_vw(60, v.$pcMaxWidth);
-        left: f.get_vw(-20, v.$pcMaxWidth);
+        top: f.get_vw(66, v.$pcMaxWidth);
+        left: f.get_vw(-29, v.$pcMaxWidth);
       }
     }
     &--4 {
-      top: f.get_vw(110);
-      left: f.get_vw(-60);
+      top: f.get_vw(97);
+      left: f.get_vw(-69);
       @include m.pc{
-        top: f.get_vw(110, v.$pcMaxWidth);
-        left: f.get_vw(-60, v.$pcMaxWidth);
+        top: f.get_vw(97, v.$pcMaxWidth);
+        left: f.get_vw(-69, v.$pcMaxWidth);
       }
     }
   }
@@ -173,19 +173,19 @@
       width: f.get_vw(32, v.$pcMaxWidth);
     }
     &-1 {
-      bottom: f.get_vw(80);
-      left: f.get_vw(-84);
+      bottom: f.get_vw(90);
+      left: f.get_vw(-80);
       @include m.pc{
-        bottom: f.get_vw(80, v.$pcMaxWidth);
-        left: f.get_vw(-84, v.$pcMaxWidth);
+        bottom: f.get_vw(90, v.$pcMaxWidth);
+        left: f.get_vw(-80, v.$pcMaxWidth);
       }
     }
     &-2 {
-      bottom: f.get_vw(37);
-      left: f.get_vw(-25);
+      bottom: f.get_vw(50);
+      left: f.get_vw(-26);
       @include m.pc{
-        bottom: f.get_vw(37, v.$pcMaxWidth);
-        left: f.get_vw(-25, v.$pcMaxWidth);
+        bottom: f.get_vw(50, v.$pcMaxWidth);
+        left: f.get_vw(-26, v.$pcMaxWidth);
       }
     }
   }

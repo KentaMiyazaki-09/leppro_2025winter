@@ -10,14 +10,12 @@
     white-space: nowrap;
     display: flex;
     align-items: center;
-    @include m.fz_vw(12);
-    @include m.fz_vw_pc(12);
     line-height: 1;
 
     z-index: 9;
     position: absolute;
     top: 25%;
-    left: 110%;
+    left: 111%;
     
     width: 100%;
     
@@ -28,13 +26,15 @@
     &__ttl {
       position: relative;
       margin-right: f.get_vw(50);
+      @include m.fz_vw(12);
+      @include m.fz_vw_pc(12);
       @include m.pc{
         margin-right: f.get_vw(50, v.$pcMaxWidth);
       }
       &::after {
         content: "";
         position: absolute;
-        top: 50%;
+        top: 36%;
         left: 160%;
         width: 20px;
         border: 1px dashed #333;
@@ -44,9 +44,9 @@
       display: flex;
       > li {
         &:not(last-child) {
-          margin-right: f.get_vw(15);
+          margin-right: f.get_vw(3);
           @include m.pc{
-            margin-right: f.get_vw(15, v.$pcMaxWidth);
+            margin-right: f.get_vw(3, v.$pcMaxWidth);
           }
         }
       }
@@ -56,6 +56,8 @@
         padding: f.get_vw(6) f.get_vw(10);
         border: 1px solid rgba(51, 51, 51, 0);
         transition: border-color 0.5s ease;
+        @include m.fz_vw(10);
+        @include m.fz_vw_pc(10);
         @include m.pc{
           padding: f.get_vw(6, v.$pcMaxWidth) f.get_vw(10, v.$pcMaxWidth);
         }

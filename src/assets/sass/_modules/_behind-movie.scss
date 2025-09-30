@@ -3,18 +3,18 @@
 @use '../variables' as v;
 
 .behind-movie {
-  padding: f.get_vw(40) f.get_vw(20);
+  padding: f.get_vw(36) f.get_vw(20);
   background-color: #F5C5CF;
   @include m.pc{
-    padding: f.get_vw(40, v.$pcMaxWidth) f.get_vw(20, v.$pcMaxWidth);
+    padding: f.get_vw(36, v.$pcMaxWidth) f.get_vw(20, v.$pcMaxWidth);
   }
   &__heading {
     display: flex;
     justify-content: space-between;
-    margin-bottom: f.get_vw(30);
+    margin-bottom: f.get_vw(26);
     @include m.pc{
       width: f.get_vw(400, v.$pcMaxWidth);
-      margin: 0 auto f.get_vw(30, v.$pcMaxWidth);
+      margin: 0 auto f.get_vw(26, v.$pcMaxWidth);
     }
 
     &__en {
@@ -27,10 +27,16 @@
 
   &__video-box {
     width: f.get_vw(225);
+    height: f.get_vw(399);
     margin: auto;
     position: relative;
+    > iframe {
+      width: 100%;
+      height: 100%;
+    }
     @include m.pc{
       width: f.get_vw(225, v.$pcMaxWidth);
+      height: f.get_vw(399, v.$pcMaxWidth);
     }
   }
 }

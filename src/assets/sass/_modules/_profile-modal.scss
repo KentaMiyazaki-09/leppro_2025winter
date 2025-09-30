@@ -39,10 +39,10 @@
 
   &__contents {
     margin: auto;
-    padding: f.get_vw(27) f.get_vw(30) f.get_vw(20);
+    padding: f.get_vw(15) f.get_vw(30) f.get_vw(20);
     @include m.pc{
       background-color: #fff;
-      padding: f.get_vw(27, v.$pcMaxWidth) f.get_vw(30, v.$pcMaxWidth) f.get_vw(20, v.$pcMaxWidth);
+      padding: f.get_vw(15, v.$pcMaxWidth) f.get_vw(30, v.$pcMaxWidth) f.get_vw(20, v.$pcMaxWidth);
       width: 31.9%;
       border-radius: 20px;
     }
@@ -55,9 +55,9 @@
     &__item {
       width: 46.5%;
       &:nth-child(2n) {
-        margin-top: f.get_vw(12);
+        margin-top: f.get_vw(10);
         @include m.pc{
-          margin-top: f.get_vw(12, v.$pcMaxWidth);
+          margin-top: f.get_vw(10, v.$pcMaxWidth);
         }
       }
       &__q {
@@ -84,15 +84,15 @@
   &__photo {
     position: relative;
     width: f.get_vw(197);
-    margin: f.get_vw(30) auto f.get_vw(20);
+    margin: f.get_vw(30) auto f.get_vw(10);
     @include m.pc{
       width: f.get_vw(197, v.$pcMaxWidth);
-      margin: f.get_vw(30, v.$pcMaxWidth) auto f.get_vw(20, v.$pcMaxWidth);
+      margin: f.get_vw(30, v.$pcMaxWidth) auto f.get_vw(10, v.$pcMaxWidth);
     }
     > img {
-      width: f.get_vw(130);
+      width: f.get_vw(148);
       @include m.pc{
-        width: f.get_vw(130, v.$pcMaxWidth);
+        width: f.get_vw(148, v.$pcMaxWidth);
       }
     }
     &__1 {
@@ -118,20 +118,20 @@
       @include m.font_Shree;
       @include m.fz_vw(16);
       @include m.fz_vw_pc(16);
-      margin-bottom: f.get_vw(20);
+      margin-bottom: f.get_vw(15);
       @include m.pc{
-        margin-bottom: f.get_vw(20, v.$pcMaxWidth);
+        margin-bottom: f.get_vw(15, v.$pcMaxWidth);
       }
     }
     &__spot {
       display: flex;
       align-items: center;
       justify-content: center;
-      margin-bottom: f.get_vw(10);
+      margin-bottom: f.get_vw(7);
       @include m.fz_vw(10);
       @include m.fz_vw_pc(10);
       @include m.pc{
-        margin-bottom: f.get_vw(10, v.$pcMaxWidth);
+        margin-bottom: f.get_vw(7, v.$pcMaxWidth);
       }
       &__icon {
         width: f.get_vw(15);
@@ -146,9 +146,9 @@
       text-align: center;
       @include m.fz_vw(11);
       @include m.fz_vw_pc(11);
-      margin-bottom: f.get_vw(20);
+      margin-bottom: f.get_vw(15);
       @include m.pc{
-        margin-bottom: f.get_vw(20, v.$pcMaxWidth);
+        margin-bottom: f.get_vw(15, v.$pcMaxWidth);
       }
     }
     &__link-box {
@@ -158,14 +158,6 @@
       margin: auto;
       @include m.pc{
         width: f.get_vw(170, v.$pcMaxWidth);
-      }
-      > * {
-        &:not(:last-child) {
-          margin-right: f.get_vw(10);
-          @include m.pc{
-            margin-right: f.get_vw(10, v.$pcMaxWidth);
-          }
-        }
       }
     }
     &__link {
@@ -177,9 +169,10 @@
       line-height: 1;
       text-align: center;
       white-space: nowrap;
-      padding: f.get_vw(7.5) f.get_vw(13) f.get_vw(5);
+      padding: f.get_vw(7.5) f.get_vw(2) f.get_vw(5);
+      width: 47%;
       @include m.pc{
-        padding: f.get_vw(7.5, v.$pcMaxWidth) f.get_vw(13, v.$pcMaxWidth) f.get_vw(5, v.$pcMaxWidth);
+        padding: f.get_vw(7.5, v.$pcMaxWidth) f.get_vw(2, v.$pcMaxWidth) f.get_vw(5, v.$pcMaxWidth);
       }
     }
   }

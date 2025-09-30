@@ -14,17 +14,17 @@
   }
 
   &__marquee {
-    --dur: 30s; /* 1周の時間 */
+    --dur: 50s; /* 1周の時間 */
     overflow: hidden;
     position: relative;
     line-height: 1;
-    padding-top: f.get_vw(20);
-    margin-bottom: f.get_vw(40);
+    padding-top: f.get_vw(18);
+    margin-bottom: f.get_vw(38);
     border-top: 1.5px dashed #232323;
     @include m.pc{
       width: f.get_vw(800, v.$pcMaxWidth);
-      padding-top: f.get_vw(20, v.$pcMaxWidth);
-      margin: 0 auto f.get_vw(40, v.$pcMaxWidth);
+      padding-top: f.get_vw(18, v.$pcMaxWidth);
+      margin: 0 auto f.get_vw(38, v.$pcMaxWidth);
     }
 
     &__track {
@@ -53,15 +53,10 @@
 
   &__video-box {
     width: f.get_vw(225);
-    height: f.get_vw(399);
     margin: auto;
-    > iframe {
-      width: 100%;
-      height: 100%;
-    }
+    position: relative;
     @include m.pc{
       width: f.get_vw(225, v.$pcMaxWidth);
-      height: f.get_vw(399, v.$pcMaxWidth);
     }
   }
 }

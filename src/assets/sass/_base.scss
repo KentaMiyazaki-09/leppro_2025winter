@@ -6,7 +6,7 @@ body {
   @include m.fz_vw(v.$basicFontSize);
   @include m.fz_vw_pc(v.$basicFontSize);
   color: #232323;
-  letter-spacing: 0.05em;
+  letter-spacing: 0.03em;
   line-height: 1.5;
   font-style: normal;
 

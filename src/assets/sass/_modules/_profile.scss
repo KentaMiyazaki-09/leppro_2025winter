@@ -3,21 +3,22 @@
 @use '../variables' as v;
 
 .profile {
-  padding: f.get_vw(30) 0 0;
-  margin-bottom: f.get_vw(40);
+  padding: f.get_vw(40) 0 0;
+  margin-bottom: f.get_vw(52);
   @include m.pc{
-    padding: f.get_vw(50, v.$pcMaxWidth) 0 0;
-    margin-bottom: f.get_vw(50, v.$pcMaxWidth);
+    padding: f.get_vw(40, v.$pcMaxWidth) 0 0;
+    margin-bottom: f.get_vw(52, v.$pcMaxWidth);
   }
 
   &__ttl {
     @include m.font_Shree;
     rotate: 5deg;
-    padding-right: f.get_vw(30);
-    margin-bottom: f.get_vw(10);
+    letter-spacing: 0.07em;
+    padding-right: f.get_vw(31);
+    margin-bottom: f.get_vw(23);
     @include m.pc{
-      padding-right: f.get_vw(30, v.$pcMaxWidth);
-      margin-bottom: f.get_vw(10, v.$pcMaxWidth);
+      padding-right: f.get_vw(31, v.$pcMaxWidth);
+      margin-bottom: f.get_vw(23, v.$pcMaxWidth);
     }
     &__text {
       display: flex;
@@ -29,10 +30,10 @@
         translate: -2em 0;
       }
       &__icon {
-        width: f.get_vw(20);
+        width: f.get_vw(21);
         translate: 0 -0.2em;
         @include m.pc{
-          width: f.get_vw(20, v.$pcMaxWidth);
+          width: f.get_vw(21, v.$pcMaxWidth);
           translate: 0 0em;
         }
       }

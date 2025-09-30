@@ -132,8 +132,8 @@
     position: absolute;
     &--1 {
       @include m.sp{
-        top: f.get_vw(20);
-        left: f.get_vw(-10);
+        top: f.get_vw(22);
+        left: f.get_vw(-12);
       }
       @include m.pc{
         top: f.get_vw(-20, v.$pcMaxWidth);
@@ -143,8 +143,8 @@
     }
     &--2 {
       @include m.sp{
-        bottom: f.get_vw(15);
-        right: f.get_vw(-10);
+        bottom: f.get_vw(11);
+        right: f.get_vw(-9);
       }
       @include m.pc{
         bottom: f.get_vw(76, v.$pcMaxWidth);

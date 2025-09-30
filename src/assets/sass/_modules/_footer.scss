@@ -14,9 +14,9 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-bottom: f.get_vw(40);
+    margin-bottom: f.get_vw(35);
     @include m.pc{
-      margin-bottom: f.get_vw(40, v.$pcMaxWidth);
+      margin-bottom: f.get_vw(35, v.$pcMaxWidth);
     }
     > img {
       width: f.get_vw(45);
@@ -48,9 +48,9 @@
   &__credit-box {
     display: flex;
     justify-content: center;
-    margin-bottom: f.get_vw(40);
+    margin-bottom: f.get_vw(38);
     @include m.pc{
-      margin-bottom: f.get_vw(40, v.$pcMaxWidth);
+      margin-bottom: f.get_vw(38, v.$pcMaxWidth);
     }
   }
   &__credit {
@@ -58,10 +58,11 @@
     &__item {
       display: flex;
       align-items: baseline;
+      padding-right: 4%;
       &:not(:last-child) {
-        margin-bottom: f.get_vw(8);
+        margin-bottom: f.get_vw(5.5);
         @include m.pc{
-          margin-bottom: f.get_vw(8, v.$pcMaxWidth);
+          margin-bottom: f.get_vw(5.5, v.$pcMaxWidth);
         }
       }
 
@@ -71,14 +72,15 @@
         @include m.font_Shree;
         @include m.fz_vw(11);
         @include m.fz_vw_pc(11);
+        letter-spacing: 0.02em;
       }
 
       > dt {
         position: relative;
         display: flex;
         align-items: center;
-        gap: 1.5em;
-        padding-right: 1.5em;
+        gap: 2em;
+        padding-right: 2em;
         @include m.pc{
           gap: 1.0em;
           padding-right: 1.0em;
@@ -104,9 +106,9 @@
     align-items: center;
     font-size: 0;
     line-height: 1;
-    margin-bottom: f.get_vw(20);
+    margin-bottom: f.get_vw(22);
     @include m.pc{
-      margin-bottom: f.get_vw(20, v.$pcMaxWidth);
+      margin-bottom: f.get_vw(22, v.$pcMaxWidth);
     }
   }
 
@@ -147,9 +149,9 @@
     }
   }
   &__line {
-    width: f.get_vw(19);
+    width: f.get_vw(23);
     @include m.pc{
-      width: f.get_vw(19, v.$pcMaxWidth);
+      width: f.get_vw(23, v.$pcMaxWidth);
     }
   }
   &__tiktok {
@@ -164,6 +166,7 @@
     text-align: center;
     @include m.fz_vw(10);
     @include m.fz_vw_pc(10);
+    letter-spacing: 0.07em;
     line-height: 1;
   }
 }
