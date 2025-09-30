@@ -17,6 +17,13 @@
   100% { opacity: 1; }
 }
 
+@keyframes fade-slot-3 {
+  0% { visibility: visible; }
+  33.32% { visibility: visible; }
+  33.34% { visibility: hidden; }
+  100% { visibility: hidden; }
+}
+
 // pcサイズ
 @mixin pc {
   @media screen and (min-width: 769px) {
