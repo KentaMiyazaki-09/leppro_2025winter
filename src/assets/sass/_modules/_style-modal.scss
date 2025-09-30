@@ -74,11 +74,11 @@
 
   &__contents {
     width: 100%;
-    padding: f.get_vw(27) 0 f.get_vw(20);
+    padding: f.get_vw(40) 0 f.get_vw(40);
     @include m.pc{
       background-color: #fff;
       background: url(../img/bg_dot_pattern.png) repeat 0 0 / 50px 50px;
-      padding: f.get_vw(27, v.$pcMaxWidth) 0 f.get_vw(20, v.$pcMaxWidth);
+      padding: f.get_vw(40, v.$pcMaxWidth) 0 f.get_vw(20, v.$pcMaxWidth);
       border-radius: 20px;
     }
   }
@@ -92,12 +92,18 @@
     line-height: 1;
     letter-spacing: 0.1em;
     margin-bottom: f.get_vw(30);
-    padding: 0 f.get_vw(30);
+    padding: 0 f.get_vw(20);
     @include m.pc{
-      margin-bottom: f.get_vw(30, v.$pcMaxWidth);
+      margin-bottom: f.get_vw(20, v.$pcMaxWidth);
     }
     &__type {
       position: relative;
+    }
+    &__name {
+      @include m.font_Shree;
+      @include m.fz_vw(13);
+      @include m.fz_vw_pc(13);
+      letter-spacing: 0.05em;
     }
   }
 
@@ -166,10 +172,10 @@
 
   &__info {
     overflow: hidden;
-    min-height: f.get_vw(80);
+    min-height: f.get_vw(40);
     margin-bottom: f.get_vw(20);
     @include m.pc{
-      min-height: f.get_vw(80, v.$pcMaxWidth);
+      min-height: f.get_vw(40, v.$pcMaxWidth);
       margin-bottom: f.get_vw(20, v.$pcMaxWidth);
     }
     .embla__container {
@@ -180,9 +186,9 @@
       flex: 0 0 100%;
       min-width: 0;
       line-height: 1;
-      padding: 0 f.get_vw(30);
+      padding: 0 f.get_vw(20);
       @include m.pc{
-        padding: 0 f.get_vw(30, v.$pcMaxWidth);
+        padding: 0 f.get_vw(20, v.$pcMaxWidth);
       }
     }
 
@@ -190,7 +196,6 @@
       display: flex;
       flex-wrap: wrap;
       > li {
-        line-height: 2;
         &:not(:last-child) {
           margin-right: f.get_vw(10);
           @include m.pc{
@@ -200,7 +205,11 @@
       }
       a {
         display: inline;
-        border-bottom: 1px solid #232323;
+        @include m.font_Shree;
+        @include m.fz_vw(13);
+        @include m.fz_vw_pc(13);
+        line-height: 2;
+        text-decoration: underline;
       }
     }
   }
