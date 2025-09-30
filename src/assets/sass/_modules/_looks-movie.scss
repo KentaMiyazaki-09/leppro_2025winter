@@ -61,6 +61,7 @@
     }
     @include m.pc{
       width: f.get_vw(225, v.$pcMaxWidth);
+      height: f.get_vw(399, v.$pcMaxWidth);
     }
   }
 }
