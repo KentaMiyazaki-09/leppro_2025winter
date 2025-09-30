@@ -27,6 +27,18 @@
     &.active {
       opacity: 1;
       pointer-events: auto;
+
+      // activeのスライドの画像切り替えをON
+      .embla__slide.active {
+        .style-modal__slide-1 {
+          opacity: 1;
+          animation: animation_slide_fade-a 8s infinite;
+        }
+        .style-modal__slide-2 {
+          animation: animation_slide_fade-a 8s infinite;
+          animation-delay: 4s;
+        }
+      }
     }
   }
 
@@ -86,9 +98,6 @@
     }
     &__type {
       position: relative;
-      &__circle {
-        
-      }
     }
   }
 
@@ -110,8 +119,22 @@
       font-size: 0;
       line-height: 1;
       margin-right: f.get_vw(10);
+      position: relative;
       @include m.pc {
         margin-right: f.get_vw(10, v.$pcMaxWidth);
+      }
+
+      .style-modal__slide-1 {
+        z-index: 10;
+        position: relative;
+      }
+      .style-modal__slide-2 {
+        z-index: 9;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
       }
     }
   }

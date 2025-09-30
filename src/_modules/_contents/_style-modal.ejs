@@ -85,7 +85,7 @@
       type: "COLOR",
       circleColor: "green",
       name: "MIWATARA",
-      listCount: 5,
+      listCount: 3,
       linkList: [
         [
           { link: "/", name: "Knit", price: "5,990"},
@@ -147,7 +147,10 @@
         <div class="style-modal__slider embla">
           <div class="embla__container">
             <% for (let i = 1; i <= element.listCount; i++) { %>
-            <div class="embla__slide"><img src="<%- rootURL %>/assets/img/style/<%- element.name %>/<%- i %>.jpg" alt=""></div>
+            <div class="embla__slide">
+              <img class="style-modal__slide-1" src="<%- rootURL %>/assets/img/style/<%- element.name %>/<%- i %>.jpg" alt="">
+              <img class="style-modal__slide-2" src="<%- rootURL %>/assets/img/style/<%- element.name %>/<%- i %>_2.jpg" alt="">
+            </div>
             <% } %>
           </div>
         </div>

@@ -4,10 +4,17 @@
 // アニメーション
 @keyframes animation_fade {
   0%{ opacity: 0; }
-  15%{ opacity: 1; } // 1.5s
-  60%{ opacity: 1; } // 6.0s
-  75%{ opacity: 0; } // 7.5s
-  100%{ opacity: 0; } // 10s
+  15%{ opacity: 1; }
+  60%{ opacity: 1; }
+  75%{ opacity: 0; }
+  100%{ opacity: 0; } // 8s
+}
+@keyframes animation_slide_fade-a {
+  0%   { opacity: 1; }
+  45%  { opacity: 1; }
+  60%  { opacity: 0; }
+  85%  { opacity: 0; }
+  100% { opacity: 1; }
 }
 
 // pcサイズ

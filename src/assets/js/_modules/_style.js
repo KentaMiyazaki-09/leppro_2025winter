@@ -36,13 +36,22 @@ export default () => {
   emblaAllNode.forEach((emblaNode, num) => {
     const countEl = emblaNode.nextElementSibling;
     const embla = EmblaCarousel(emblaNode, { loop: true });
+    const slides = embla.slideNodes();
+
+    slides[0].classList.add("active");
 
     embla.on("select", () => {
-      const idx = embla.selectedScrollSnap();
-      linkSliderList[num].scrollTo(idx);
+      const selected = embla.selectedScrollSnap();
+      linkSliderList[num].scrollTo(selected);
 
+      // スライドに"active"クラスを付与
+      slides.forEach((slide, i) =>
+        slide.classList.toggle("active", i === selected)
+      );
+
+      // ページ表示のカウントを変更
       countEl.querySelector(".style-modal__count__center__current").innerHTML =
-        idx + 1;
+        selected + 1;
     });
   });
 };
