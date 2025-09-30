@@ -106,6 +106,7 @@
   }
 
   &__circle-group {
+    z-index: 9;
     position: absolute;
     &--1 {
       @include m.sp{
@@ -113,8 +114,9 @@
         left: f.get_vw(-10);
       }
       @include m.pc{
-        top: f.get_vw(20);
+        top: f.get_vw(-20, v.$pcMaxWidth);
         left: 50%;
+        translate: f.get_vw(-280, v.$pcMaxWidth) 0;
       }
     }
     &--2 {
@@ -123,8 +125,9 @@
         right: f.get_vw(-10);
       }
       @include m.pc{
-        bottom: 0;
+        bottom: f.get_vw(76, v.$pcMaxWidth);
         left: 50%;
+        translate: f.get_vw(155, v.$pcMaxWidth) 0;
       }
     }
   }

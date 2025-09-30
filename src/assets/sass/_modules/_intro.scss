@@ -5,6 +5,7 @@
 .intro {
   padding: f.get_vw(25) f.get_vw(20);
   position: relative;
+  overflow: hidden;
 
   @include m.pc{
     padding: f.get_vw(100, v.$pcMaxWidth) f.get_vw(20, v.$pcMaxWidth);
@@ -87,6 +88,7 @@
   }
 
   &__lead {
+    position: relative;
     &__ttl {
       @include m.fz_vw(16);
       @include m.fz_vw_pc(16);
