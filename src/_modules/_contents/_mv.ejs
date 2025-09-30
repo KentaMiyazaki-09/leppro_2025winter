@@ -1,7 +1,36 @@
 <div class="mv">
-  
 
   <div class="mv__inner">
+
+    <div class="mv__circle-group mv__circle-group--1">
+      <%- include("./_circle.ejs", {
+        className: "circle--orange circle--mv-gourp-1-1",
+      }) %>
+      <%- include("./_circle.ejs", {
+        className: "circle--green circle--mv-gourp-1-2",
+      }) %>
+      <%- include("./_circle.ejs", {
+        className: "circle--yellow circle--mv-gourp-1-3",
+      }) %>
+      <%- include("./_circle.ejs", {
+        className: "circle--blue circle--mv-gourp-1-4",
+      }) %>
+    </div>
+    <div class="mv__circle-group mv__circle-group--2">
+      <%- include("./_circle.ejs", {
+        className: "circle--orange circle--mv-gourp-2-1",
+      }) %>
+      <%- include("./_circle.ejs", {
+        className: "circle--green circle--mv-gourp-2-2",
+      }) %>
+      <%- include("./_circle.ejs", {
+        className: "circle--blue circle--mv-gourp-2-3",
+      }) %>
+      <%- include("./_circle.ejs", {
+        className: "circle--yellow circle--mv-gourp-2-4",
+      }) %>
+    </div>
+
     <h1 class="mv__ttl">
       <img src="<%- rootURL %>/assets/img/site_ttl.png" alt="LEPSIM PROJECT">
     </h1>

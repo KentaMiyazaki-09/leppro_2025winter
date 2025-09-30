@@ -104,4 +104,28 @@
       }
     }
   }
+
+  &__circle-group {
+    position: absolute;
+    &--1 {
+      @include m.sp{
+        top: f.get_vw(20);
+        left: f.get_vw(-10);
+      }
+      @include m.pc{
+        top: f.get_vw(20);
+        left: 50%;
+      }
+    }
+    &--2 {
+      @include m.sp{
+        bottom: f.get_vw(15);
+        right: f.get_vw(-10);
+      }
+      @include m.pc{
+        bottom: 0;
+        left: 50%;
+      }
+    }
+  }
 }
