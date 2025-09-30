@@ -85,8 +85,23 @@
     font-size: 0;
     line-height: 1;
     margin-bottom: f.get_vw(10);
+    position: relative;
     @include m.pc{
       margin-bottom: f.get_vw(10, v.$pcMaxWidth);
+    }
+
+    &__1 {
+      animation: animation_fade 8s infinite;
+    }
+    &__2 {
+      animation: animation_fade 8s infinite;
+      animation-delay: 4s;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      opacity: 0;
     }
   }
 

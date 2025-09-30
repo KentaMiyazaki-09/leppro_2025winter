@@ -1,6 +1,15 @@
 @use './variables' as v;
 @use './functions' as f;
 
+// アニメーション
+@keyframes animation_fade {
+  0%{ opacity: 0; }
+  15%{ opacity: 1; } // 1.5s
+  60%{ opacity: 1; } // 6.0s
+  75%{ opacity: 0; } // 7.5s
+  100%{ opacity: 0; } // 10s
+}
+
 // pcサイズ
 @mixin pc {
   @media screen and (min-width: 769px) {
