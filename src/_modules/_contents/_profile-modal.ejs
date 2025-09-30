@@ -2,6 +2,7 @@
   const profileList = [
     {
       name: "310",
+      circleColor: "orange",
       spot: "パークプレイス大分",
       status: "163cm / 40代前半、2児のママ",
       instagram: "/",
@@ -29,6 +30,7 @@
     },
     {
       name: "MIWATARA",
+      circleColor: "green",
       spot: "ららぽーと新三郷",
       status: "156cm / 30代後半、2児のママ",
       instagram: "/",
@@ -56,6 +58,7 @@
     },
     {
       name: "YUKIHA",
+      circleColor: "yellow",
       spot: "モモテラス",
       status: "155cm / 30代前半、2児のママ",
       instagram: "/",
@@ -83,6 +86,7 @@
     },
     {
       name: "KATSUKO",
+      circleColor: "blue",
       spot: "イオンモール四條畷",
       status: "158cm / 30代後半、3児のママ",
       instagram: "/",
@@ -130,11 +134,19 @@
         <div class="profile-modal__photo">
           <img class="profile-modal__photo__1" src="<%- rootURL %>/assets/img/profile/<%- element.name %>_1.png" alt="">
           <img class="profile-modal__photo__2" src="<%- rootURL %>/assets/img/profile/<%- element.name %>_2.png" alt="">
-  
-          <div class="profile-modal__photo__circle profile-modal__photo__circle--1"></div>
-          <div class="profile-modal__photo__circle profile-modal__photo__circle--2"></div>
-          <div class="profile-modal__photo__circle profile-modal__photo__circle--3"></div>
-          <div class="profile-modal__photo__circle profile-modal__photo__circle--4"></div>
+
+          <%- include("./_circle.ejs", {
+            className: `circle--profile-modal circle--profile-modal--1 circle--${element.circleColor}`,
+          }) %>
+          <%- include("./_circle.ejs", {
+            className: `circle--profile-modal circle--profile-modal--2 circle--${element.circleColor}`,
+          }) %>
+          <%- include("./_circle.ejs", {
+            className: `circle--profile-modal circle--profile-modal--3 circle--${element.circleColor}`,
+          }) %>
+          <%- include("./_circle.ejs", {
+            className: `circle--profile-modal circle--profile-modal--4 circle--${element.circleColor}`,
+          }) %>
         </div>
   
         <div class="profile-modal__info">

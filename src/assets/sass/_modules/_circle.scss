@@ -33,6 +33,48 @@
     }
   }
 
+   &--profile-modal {
+    position: absolute;
+    width: f.get_vw(20);
+    aspect-ratio: 1/1;
+    border-radius: 50%;
+    @include m.pc{
+      width: f.get_vw(20, v.$pcMaxWidth);
+    }
+    &--1 {
+      top: f.get_vw(30);
+      left: f.get_vw(-40);
+      @include m.pc{
+        top: f.get_vw(30, v.$pcMaxWidth);
+        left: f.get_vw(-40, v.$pcMaxWidth);
+      }
+    }
+    &--2 {
+      top: f.get_vw(50);
+      left: f.get_vw(-10);
+      @include m.pc{
+        top: f.get_vw(50, v.$pcMaxWidth);
+        left: f.get_vw(-10, v.$pcMaxWidth);
+      }
+    }
+    &--3 {
+      top: f.get_vw(60);
+      left: f.get_vw(-20);
+      @include m.pc{
+        top: f.get_vw(60, v.$pcMaxWidth);
+        left: f.get_vw(-20, v.$pcMaxWidth);
+      }
+    }
+    &--4 {
+      top: f.get_vw(110);
+      left: f.get_vw(-60);
+      @include m.pc{
+        top: f.get_vw(110, v.$pcMaxWidth);
+        left: f.get_vw(-60, v.$pcMaxWidth);
+      }
+    }
+  }
+
   &--blue {
     background-color: v.$blue;
   }
