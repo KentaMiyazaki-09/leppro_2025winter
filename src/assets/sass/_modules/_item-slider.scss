@@ -61,6 +61,19 @@
       mask-position: center;
       mask-repeat: no-repeat;
       mask-size: contain; 
+
+      &__img {
+        rotate: 0deg;
+        transition: rotate 1.2s ease;
+      }
+    }
+
+    &.has-animation {
+      &.clicked {
+        .item-slider__change-btn__bg__img {
+          rotate: 360deg;
+        }
+      }
     }
 
     &__star {

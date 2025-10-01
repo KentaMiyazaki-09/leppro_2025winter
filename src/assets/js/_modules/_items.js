@@ -2,6 +2,7 @@ import EmblaCarousel from "embla-carousel";
 import Fade from "embla-carousel-fade";
 
 export default () => {
+  /* スライダー本体 */
   const emblaAllNode = document.querySelectorAll(".item-slider__carousel");
   const options = { loop: true };
 
@@ -12,8 +13,12 @@ export default () => {
 
     slider
       .querySelector(".item-slider__change-btn")
-      .addEventListener("click", () => {
+      .addEventListener("click", function (e) {
+        e.preventDefault();
         embla.scrollNext();
+
+        /* ボタンのアニメーション */
+        this.classList.add("clicked");
       });
   });
 };
