@@ -68,14 +68,6 @@
       }
     }
 
-    &.has-animation {
-      &.clicked {
-        .item-slider__change-btn__bg__img {
-          rotate: 360deg;
-        }
-      }
-    }
-
     &__star {
       z-index: 10;
       position: absolute;
