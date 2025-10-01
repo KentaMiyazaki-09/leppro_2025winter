@@ -5,7 +5,7 @@
 .style {
   padding: f.get_vw(40) 0 0;
   @include m.pc{
-    padding: f.get_vw(40, v.$pcMaxWidth) 0 0;
+    padding: f.get_vw(103, v.$pcMaxWidth) 0 0;
   }
   &__inner {
 
@@ -21,7 +21,7 @@
     &__en {
       @include m.font_Shree;
       @include m.fz_vw(16);
-      @include m.fz_vw_pc(16);
+      @include m.fz_vw_pc(18);
       letter-spacing: 0.2em;
       line-height: 1;
       margin-bottom: f.get_vw(15);
@@ -31,7 +31,7 @@
     }
     &__ja {
       @include m.fz_vw(20);
-      @include m.fz_vw_pc(20);
+      @include m.fz_vw_pc(22);
       line-height: 1;
       letter-spacing: 0.1em;
     }
@@ -119,8 +119,14 @@
       right: 0;
       margin: auto;
       @include m.pc{
+        top: 60%;
+        left: 1%;
         width: f.get_vw(257, v.$pcMaxWidth);
       }
+    }
+
+    &__lead {
+      @include m.fz_vw_pc(14);
     }
   }
 
@@ -128,7 +134,7 @@
     background-color: #fff;
     padding: f.get_vw(50) f.get_vw(20) 0;
     @include m.pc{
-      padding: f.get_vw(100, v.$pcMaxWidth) 0 f.get_vw(20, v.$pcMaxWidth) 0;
+      padding: f.get_vw(110, v.$pcMaxWidth) 0 f.get_vw(20, v.$pcMaxWidth) 0;
     }
   }
   &__list-inner {

@@ -23,7 +23,7 @@
     text-align: center;
     margin-bottom: f.get_vw(40);
     @include m.pc{
-      margin-bottom: f.get_vw(40, v.$pcMaxWidth);
+      margin-bottom: f.get_vw(72, v.$pcMaxWidth);
     }
 
     &::after {
@@ -91,11 +91,11 @@
     position: relative;
     &__ttl {
       @include m.fz_vw(16);
-      @include m.fz_vw_pc(16);
+      @include m.fz_vw_pc(18);
       text-align: center;
       margin-bottom: f.get_vw(25);
       @include m.pc{
-        margin-bottom: f.get_vw(25, v.$pcMaxWidth);
+        margin-bottom: f.get_vw(28, v.$pcMaxWidth);
       }
       > span {
         @include m.font_Shree;
@@ -108,18 +108,24 @@
         box-decoration-break: clone;
         padding: 0 .3em;
         line-height: 1.5;
+        @include m.pc{
+          line-height: 1.2;
+        }
       }
     }
 
     > p {
       text-align: center;
       @include m.fz_vw(12);
-      @include m.fz_vw_pc(12);
+      @include m.fz_vw_pc(14);
       letter-spacing: 0.03em;
+      @include m.pc{
+        white-space: nowrap;
+      }
       &:not(:last-child) {
         margin-bottom: f.get_vw(18);
         @include m.pc{
-          margin-bottom: f.get_vw(18, v.$pcMaxWidth);
+          margin-bottom: f.get_vw(20, v.$pcMaxWidth);
         }
       }
     }
@@ -143,9 +149,9 @@
       }
 
       > img {
-        animation: fade-slot-2 5s infinite both;
+        animation: fade-slot-2 5.6s infinite both;
         &.intro__gif__2 {
-          animation-delay: 2.5s;
+          animation-delay: 2.8s;
         }
       }
     }

@@ -6,7 +6,7 @@
   background-color: #EDF2E7;
   padding: f.get_vw(20) f.get_vw(20) f.get_vw(40);
   @include m.pc{
-    padding: f.get_vw(20, v.$pcMaxWidth) f.get_vw(20, v.$pcMaxWidth) f.get_vw(140, v.$pcMaxWidth);
+    padding: f.get_vw(97, v.$pcMaxWidth) f.get_vw(20, v.$pcMaxWidth) f.get_vw(206, v.$pcMaxWidth);
   }
 
   &__slider-box {
@@ -23,14 +23,14 @@
     @include m.font_Shree;
     display: flex;
     @include m.fz_vw(11);
-    @include m.fz_vw_pc(11);
+    @include m.fz_vw_pc(13);
     margin-bottom: f.get_vw(36);
     @include m.sp{
       justify-content: space-between;
     }
     @include m.pc{
       justify-content: center;
-      margin-bottom: f.get_vw(36, v.$pcMaxWidth);
+      margin-bottom: f.get_vw(57, v.$pcMaxWidth);
     }
 
     &__center {
@@ -43,23 +43,23 @@
   &__ttl {
     margin-bottom: f.get_vw(27);
     @include m.pc{
-      margin-bottom: f.get_vw(27, v.$pcMaxWidth);
+      margin-bottom: f.get_vw(49, v.$pcMaxWidth);
     }
     &__primary {
       text-align: center;
       @include m.font_Shree;
       @include m.fz_vw(25);
-      @include m.fz_vw_pc(25);
+      @include m.fz_vw_pc(27);
       line-height: 1;
       margin-bottom: f.get_vw(3);
       @include m.pc{
-        margin-bottom: f.get_vw(3, v.$pcMaxWidth);
+        margin-bottom: f.get_vw(2, v.$pcMaxWidth);
       }
     }
     &__primaryja {
       text-align: center;
       @include m.fz_vw(10);
-      @include m.fz_vw_pc(10);
+      @include m.fz_vw_pc(12);
       margin-bottom: f.get_vw(14);
       @include m.pc{
         margin-bottom: f.get_vw(14, v.$pcMaxWidth);
@@ -67,6 +67,7 @@
     }
     &__sub {
       text-align: center;
+      letter-spacing: 0.2em;
     }
   }
 
@@ -127,7 +128,7 @@
     }
     &__lead {
       @include m.fz_vw(10);
-      @include m.fz_vw_pc(10);
+      @include m.fz_vw_pc(12);
       border-radius: 20px;
       padding: f.get_vw(15);
       @include m.pc{
@@ -157,7 +158,7 @@
       @include m.pc{
         top: 0;
         left: 50%;
-        translate: f.get_vw(-350, v.$pcMaxWidth) 0;
+        translate: f.get_vw(-375, v.$pcMaxWidth) f.get_vw(-29, v.$pcMaxWidth);
       }
       .item__comment__lead {
          margin-bottom: f.get_vw(25);
@@ -182,8 +183,8 @@
     &--KATSUKO {
       margin-top: f.get_vw(15);
       @include m.pc{
-        margin-top: f.get_vw(15, v.$pcMaxWidth);
-        translate: f.get_vw(350, v.$pcMaxWidth) 0;
+        margin-top: f.get_vw(-13, v.$pcMaxWidth);
+        translate: f.get_vw(360, v.$pcMaxWidth) 0;
       }
       @include m.pc{
         top: 0;
@@ -211,9 +212,9 @@
     }
     &--YUKIHA {
       @include m.pc{
-        bottom: 0;
+        bottom: -29.5%;
         left: 50%;
-        translate: f.get_vw(-330, v.$pcMaxWidth) 0;
+        translate: f.get_vw(-350, v.$pcMaxWidth) 0;
       }
       .item__comment__lead {
          margin-bottom: f.get_vw(20);
@@ -239,9 +240,9 @@
       margin-top: f.get_vw(15);
       @include m.pc{
         margin-top: f.get_vw(15, v.$pcMaxWidth);
-        bottom: 0;
+        bottom: -29.3%;
         right: 50%;
-        translate: f.get_vw(340, v.$pcMaxWidth) 0;
+        translate: f.get_vw(350, v.$pcMaxWidth) 0;
       }
       .item__comment__lead {
         margin-bottom: f.get_vw(25);

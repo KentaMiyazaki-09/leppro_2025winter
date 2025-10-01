@@ -7,7 +7,7 @@
   display: inline-block;
   margin-bottom: f.get_vw(15);
   @include m.pc{
-    margin-bottom: f.get_vw(15, v.$pcMaxWidth);
+    margin-bottom: f.get_vw(45, v.$pcMaxWidth);
   }
 
   &__change-btn {
