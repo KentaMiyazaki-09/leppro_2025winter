@@ -67,7 +67,9 @@
     }
     &__sub {
       text-align: center;
-      letter-spacing: 0.2em;
+      @include m.pc{
+        letter-spacing: 0.2em;
+      }
     }
   }
 

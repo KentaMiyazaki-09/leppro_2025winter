@@ -118,7 +118,7 @@
       text-align: center;
       @include m.fz_vw(12);
       @include m.fz_vw_pc(14);
-      letter-spacing: 0.03em;
+      letter-spacing: 0.02em;
       @include m.pc{
         white-space: nowrap;
       }

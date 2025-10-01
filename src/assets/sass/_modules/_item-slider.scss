@@ -29,10 +29,13 @@
       position: relative;
       display: block;
       line-height: 1;
+      font-size: 0;
       margin: f.get_vw(4) auto 0;
       width: f.get_vw(23);
+      height: f.get_vw(14);
       @include m.pc{
         width: f.get_vw(23, v.$pcMaxWidth);
+        height: f.get_vw(14, v.$pcMaxWidth);
         margin-top: f.get_vw(4, v.$pcMaxWidth);
       }
     }
