@@ -41,11 +41,11 @@
 
   &__contents {
     margin: auto;
-    padding: f.get_vw(15) f.get_vw(30) f.get_vw(20);
+    padding: f.get_vw(30) f.get_vw(30) f.get_vw(20);
     @include m.pc{
       background: url(../img/bg_dot_pattern.png) repeat 0 0 / 50px 50px;
       background-color: #fff;
-      padding: f.get_vw(22, v.$pcMaxWidth) f.get_vw(30, v.$pcMaxWidth) f.get_vw(20, v.$pcMaxWidth);
+      padding: f.get_vw(30, v.$pcMaxWidth) f.get_vw(30, v.$pcMaxWidth) f.get_vw(20, v.$pcMaxWidth);
       width: 27.4%;
       border-radius: 20px;
       border: 1px solid #DADEE8;

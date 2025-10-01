@@ -32,11 +32,11 @@
       .embla__slide.active {
         .style-modal__slide-1 {
           opacity: 1;
-          animation: animation_slide_fade-a 8s infinite;
+          animation: animation_slide_fade-a 4s infinite;
         }
         .style-modal__slide-2 {
-          animation: animation_slide_fade-a 8s infinite;
-          animation-delay: 4s;
+          animation: animation_slide_fade-a 4s infinite;
+          animation-delay: 2s;
         }
       }
     }

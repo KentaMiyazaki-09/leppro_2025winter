@@ -55,6 +55,7 @@
     width: f.get_vw(225);
     margin: auto;
     position: relative;
+    border: 1px solid #333;
     @include m.pc{
       width: f.get_vw(225, v.$pcMaxWidth);
     }
