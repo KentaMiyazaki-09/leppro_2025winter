@@ -61,6 +61,11 @@
       mask-position: center;
       mask-repeat: no-repeat;
       mask-size: contain; 
+
+      &__img {
+        rotate: 0deg;
+        transition: rotate 1.2s ease;
+      }
     }
 
     &__star {
