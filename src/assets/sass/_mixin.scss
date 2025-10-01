@@ -17,6 +17,14 @@
   100% { opacity: 1; }
 }
 
+// ２枚切り替え
+@keyframes fade-slot-2 {
+  0% { visibility: visible; }
+  49.8% { visibility: visible; }
+  50% { visibility: hidden; }
+  100% { visibility: hidden; }
+}
+// 3枚切り替え
 @keyframes fade-slot-3 {
   0% { visibility: visible; }
   33.32% { visibility: visible; }

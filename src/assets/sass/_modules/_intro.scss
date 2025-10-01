@@ -127,16 +127,35 @@
 
   &__gif {
     margin-top: f.get_vw(40);
+    margin-bottom: f.get_vw(35);
     text-align: center;
     @include m.pc{
       margin-top: f.get_vw(40, v.$pcMaxWidth);
+      margin-bottom: f.get_vw(35, v.$pcMaxWidth);
     }
-    > img {
+
+    &__item {
       display: inline-block;
       width: f.get_vw(208);
+      position: relative;
       @include m.pc{
         width: f.get_vw(208, v.$pcMaxWidth);
       }
+
+      > img {
+        animation: fade-slot-2 5s infinite both;
+        &.intro__gif__2 {
+          animation-delay: 2.5s;
+        }
+      }
+    }
+
+    &__2 {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
     }
   }
 
