@@ -10,6 +10,7 @@
   width: 100%;
   height: 100%;
   overflow-y: auto;
+  transform: translateZ(0);
   display: flex;
   justify-content: center;
   @include m.sp{
@@ -18,6 +19,7 @@
   }
   @include m.pc {
     backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
   }
 
   &.has-active {
