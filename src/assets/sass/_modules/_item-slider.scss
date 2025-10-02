@@ -24,6 +24,7 @@
       left: f.get_vw(-30, v.$pcMaxWidth);
       width: f.get_vw(68, v.$pcMaxWidth);
     }
+
     &__arrow {
       z-index: 9;
       position: relative;
@@ -33,6 +34,15 @@
       margin: f.get_vw(4) auto 0;
       width: f.get_vw(23);
       height: f.get_vw(14);
+      @keyframes changeBtn {
+        0%   { transform: scale(1); }
+        12%  { transform: scale(1.1) scaleX(0.96); }
+        20%  { transform: scale(1); }
+        28%  { transform: scale(1.05) scaleX(0.98); }
+        36%  { transform: scale(1); }
+        100% { transform: scale(1); }
+      }
+      animation: changeBtn 3.6s ease-in-out infinite;
       @include m.pc{
         width: f.get_vw(23, v.$pcMaxWidth);
         height: f.get_vw(14, v.$pcMaxWidth);
