@@ -22,9 +22,17 @@
     transition: opacity 0.6s ease;
     opacity: 0;
     pointer-events: none;
+    .profile-modal__question__item__a {
+      @include m.animation_scrollFadeComment_before;
+      transition-delay: 0.2s;
+    }
     &.active {
       opacity: 1;
       pointer-events: auto;
+      .profile-modal__question__item__a {
+        @include m.animation_scrollFadeComment_after;
+        animation-delay: 0.2s;
+      }
     }
   }
 

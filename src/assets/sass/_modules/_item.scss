@@ -149,10 +149,9 @@
 
     .item__comment__lead {
       &.has-animation {
-        @include m.animation_scrollFade_before;
-        translate: 0 8px;
+        @include m.animation_scrollFadeComment_before;
         &.is-animated {
-          @include m.animation_scrollFade_after;
+          @include m.animation_scrollFadeComment_after;
         }
       }
     }
