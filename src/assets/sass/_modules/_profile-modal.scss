@@ -76,6 +76,7 @@
         @include m.fz_vw(11);
         @include m.fz_vw_pc(11);
         padding: f.get_vw(10) f.get_vw(15);
+        font-feature-settings: "palt";
         background: linear-gradient(180deg, #E6FFD2 0%, #A9FF60 100%);
         border-radius: 15px;
         @include m.pc{
