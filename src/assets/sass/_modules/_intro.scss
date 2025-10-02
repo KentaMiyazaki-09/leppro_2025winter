@@ -7,6 +7,13 @@
   position: relative;
   overflow: hidden;
 
+  &.has-animation {
+    @include m.animation_scrollFade_before;
+    &.is-animated {
+      @include m.animation_scrollFade_after;
+    }
+  }
+
   @include m.pc{
     padding: f.get_vw(100, v.$pcMaxWidth) f.get_vw(20, v.$pcMaxWidth);
   }
@@ -89,6 +96,37 @@
 
   &__lead {
     position: relative;
+     &.has-animation {
+      .intro__lead__ttl,
+      > p {
+        @include m.animation_scrollFade_before;
+      }
+      .intro__lead__ttl {
+        transition-delay: 0.2s;
+      }
+      > p {
+        transition-delay: 0.4s;
+      }
+      .circle {
+        opacity: 0;
+        transition: opacity 0.01s ease;
+        &--intro-1 {
+          transition-delay: 0s;
+        }
+        &--intro-2 {
+          transition-delay: 0.8s;
+        }
+      }
+      &.is-animated {
+        .intro__lead__ttl,
+        > p {
+          @include m.animation_scrollFade_after;
+        }
+        .circle {
+          opacity: 1;
+        }
+      }
+    }
     &__ttl {
       @include m.fz_vw(16);
       @include m.fz_vw_pc(18);

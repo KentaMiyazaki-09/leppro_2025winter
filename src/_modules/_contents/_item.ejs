@@ -1,4 +1,4 @@
-<div class="item <%- className %>">
+<div class="item <%- className %> has-animation">
 
   <div class="item__header">
     <span><%- num %></span>
@@ -16,7 +16,7 @@
     <% const comment1to2 = commentList.slice(0, 2) %>
     <% comment1to2.forEach(element => { %>
     <div class="item__comment item__comment--<%- element.name %>">
-      <p class="item__comment__lead">
+      <p class="item__comment__lead has-animation">
         <span class="item__comment__lead__comment"><%- element.comment %></span>
         <svg class="item__comment__lead__triangle" viewBox="0 0 34 48" fill="none" xmlns="http://www.w3.org/2000/svg">
         <path d="M19.8566 45.0939C18.9655 47.8722 15.0345 47.8722 14.1433 45.0938L0.935635 3.91626C0.314603 1.98008 1.75893 -3.08087e-06 3.79228 -2.90311e-06L30.2077 -5.93801e-07C32.2411 -4.1604e-07 33.6854 1.98008 33.0644 3.91627L19.8566 45.0939Z" fill="#fff"/>
@@ -39,7 +39,7 @@
     <% const comment3to4 = commentList.slice(2, 4) %>
     <% comment3to4.forEach(element => { %>
     <div class="item__comment item__comment--<%- element.name %>">
-      <p class="item__comment__lead">
+      <p class="item__comment__lead has-animation">
         <span class="item__comment__lead__comment"><%- element.comment %></span>
         <svg class="item__comment__lead__triangle" viewBox="0 0 34 48" fill="none" xmlns="http://www.w3.org/2000/svg">
         <path d="M19.8566 45.0939C18.9655 47.8722 15.0345 47.8722 14.1433 45.0938L0.935635 3.91626C0.314603 1.98008 1.75893 -3.08087e-06 3.79228 -2.90311e-06L30.2077 -5.93801e-07C32.2411 -4.1604e-07 33.6854 1.98008 33.0644 3.91627L19.8566 45.0939Z" fill="#fff"/>

@@ -127,6 +127,8 @@
       font-size: 0;
       background-color: #fff;
       width: f.get_vw(25);
+
+      animation: heartbeatSquash 4.6s ease-in-out infinite;
       @include m.pc{
         width: f.get_vw(25, v.$pcMaxWidth);
       }

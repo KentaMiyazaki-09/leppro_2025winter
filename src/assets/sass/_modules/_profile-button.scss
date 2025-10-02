@@ -23,6 +23,9 @@
     font-size: 0;
     background-color: #fff;
     width: f.get_vw(32);
+
+    animation: heartbeatSquash 4.6s ease-in-out infinite;
+
     @include m.pc{
       border-width: 0.5px;
       width: f.get_vw(32, v.$pcMaxWidth);

@@ -9,6 +9,90 @@
     padding: f.get_vw(100, v.$pcMaxWidth) f.get_vw(20, v.$pcMaxWidth);
   }
 
+  &.has-animation {
+    @keyframes mochi-drop {
+      0%   { transform: translateY(-80%) scale(1); opacity: 0; }
+      60%  { transform: translateY(0) scaleX(1.08) scaleY(.84); opacity: 1; }
+      72%  { transform: translateY(-14%) scaleX(.98) scaleY(1.06); }
+      84%  { transform: translateY(0) scaleX(1.04) scaleY(.96); }
+      100% { transform: translateY(0) scale(1); }
+    }
+    .mv__ttl img {
+      transform-origin: 50% 100%;  /* 足元を支点＝着地の“潰れ”が効く */animation: mochi-drop 1.1s ease 1 both;
+    }
+
+    .mv__circle-group--1 {
+      .circle {
+        opacity: 0;
+        transition: opacity 0.01s linear;
+        &:nth-of-type(1) {
+          transition-delay: 0.3s;
+        }
+        &:nth-of-type(2) {
+          transition-delay: 0.5s;
+        }
+        &:nth-of-type(3) {
+          transition-delay: 0.6s;
+        }
+        &:nth-of-type(4) {
+          transition-delay: 0.8s;
+        }
+      }
+    }
+    .mv__circle-group--2 {
+      .circle {
+        opacity: 0;
+        &:nth-of-type(1) {
+          transition-delay: 1.1s;
+        }
+        &:nth-of-type(2) {
+          transition-delay: 1.3s;
+        }
+        &:nth-of-type(3) {
+          transition-delay: 1.4s;
+        }
+        &:nth-of-type(4) {
+          transition-delay: 1.7s;
+        }
+      }
+    }
+
+    .mv__logo-lepsim {
+      opacity: 0;
+      translate: 0 -7px;
+      transition: opacity 0.9s ease, translate 1.2s ease;
+      transition-delay: 1.5s;
+    }
+
+    .mv__carousel__label {
+      opacity: 0;
+      transition: opacity 1.2s ease, translate 1.2s ease;
+      &--pc-1 {
+        transition-delay: 1.6s;
+      }
+      &--pc-2 {
+        transition-delay: 0.4s;
+      }
+    }
+
+    &.active {
+      .circle {
+        opacity: 1;
+      }
+      .mv__ttl img {
+        scale: 1;
+      }
+
+      .mv__logo-lepsim {
+        opacity: 1;
+      }
+
+      .mv__carousel__label {
+        opacity: 1;
+      }
+    }
+  }
+
   &__inner {
     position: relative;
   }
@@ -45,24 +129,21 @@
     }
 
     &__item {
-      position: relative;
-      // > img {
-      //   // animation: fade-slot-3 7.5s infinite both;
-      //   &.mv__carousel__item__2 {
-      //     animation-delay: 2.5s;
-      //   }
-      //   &.mv__carousel__item__3 {
-      //     animation-delay: 5s;
-      //   }
-      // }
-      // &__2,
-      // &__3 {
-      //   position: absolute;
-      //   top: 0;
-      //   left: 0;
-      //   width: 100%;
-      //   height: 100%;
-      // }
+      @keyframes mv_item_sticker {
+        0%  { opacity:0; transform: translateY(-100px) scale(.9) rotate(var(--rot)); }
+        45% { opacity:1; transform: translateY(0) scale(1.05) rotate(var(--rot)); }
+        60% { transform: translateY(0) scale(0.98,1.02) rotate(var(--rot)); }
+        100%{ transform: translateY(0) scale(1) rotate(var(--rot)); }
+      }
+      > img {
+        animation: mv_item_sticker 0.8s ease-out both;
+      }
+      &__2 img {
+        animation-delay: 0.8s;
+      }
+      &__3 img {
+        animation-delay: 1.4s;
+      }
     }
 
     &__label {

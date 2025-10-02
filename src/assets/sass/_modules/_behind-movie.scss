@@ -5,6 +5,34 @@
 .behind-movie {
   padding: f.get_vw(36) f.get_vw(20);
   background-color: #F5C5CF;
+
+  &.has-animation {
+    .behind-movie__lead {
+      @include m.animation_scrollFade_before;
+    }
+
+    .circle--video-1,
+    .circle--video-2 {
+      opacity: 0;
+    }
+    .circle--video-1 {
+      transition-delay: 0.6s;
+    }
+    .circle--video-2 {
+      transition-delay: 0.2s;
+    }
+
+    &.is-animated {
+      .behind-movie__lead {
+        @include m.animation_scrollFade_after;
+      }
+      .circle--video-1,
+      .circle--video-2 {
+        opacity: 1;
+      }
+    }
+  }
+
   @include m.pc{
     padding: f.get_vw(47, v.$pcMaxWidth) f.get_vw(20, v.$pcMaxWidth);
   }
