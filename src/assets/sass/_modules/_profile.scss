@@ -32,14 +32,15 @@
       &__icon {
         width: f.get_vw(21);
         translate: 0 -0.2em;
-        @keyframes heart_beat {
-          0% {
-            scale: 1;
-          }
-          100% {
-            scale: 1;
-          }
+        @keyframes heartbeatSquash{
+          0%   { transform: scale(1); }
+          12%  { transform: scale(1.2) scaleX(0.96); }
+          20%  { transform: scale(1); }
+          28%  { transform: scale(1.12) scaleX(0.98); }
+          36%  { transform: scale(1); }
+          100% { transform: scale(1); }
         }
+        animation: heartbeatSquash 1.6s ease-in-out infinite;
         @include m.pc{
           width: f.get_vw(21, v.$pcMaxWidth);
           translate: 0 0em;
