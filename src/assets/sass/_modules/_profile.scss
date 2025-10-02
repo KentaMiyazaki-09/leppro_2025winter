@@ -92,13 +92,19 @@
         }
       }
       animation: floating-x 7.2s ease-in-out infinite alternate-reverse;
+      &:nth-of-type(1) {
+        z-index: 14;
+      }
       &:nth-of-type(2) {
+        z-index: 13;
         animation-delay: 1.8s;
       }
       &:nth-of-type(3) {
+        z-index: 12;
         animation-delay: 3.6s;
       }
       &:nth-of-type(4) {
+        z-index: 11;
         animation-delay: 5.2s;
       }
       .profile-button {

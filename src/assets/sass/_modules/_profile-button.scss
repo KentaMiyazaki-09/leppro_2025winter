@@ -39,6 +39,7 @@
   }
 
   &--310 {
+    z-index: 12;
     margin-left: f.get_vw(34);
     width: f.get_vw(115);
     @include m.pc{
@@ -68,6 +69,7 @@
   }
 
   &--MIWATARA {
+    z-index: 13;
     margin-top: f.get_vw(32);
     margin-left: f.get_vw(24);
     width: f.get_vw(136);
@@ -98,6 +100,7 @@
   }
 
   &--YUKIHA {
+    z-index: 14;
     margin-top: f.get_vw(0);
     margin-left: f.get_vw(52);
     width: f.get_vw(134);
@@ -128,6 +131,7 @@
   }
 
   &--KATSUKO {
+    z-index: 15;
     margin-top: f.get_vw(20);
     margin-left: f.get_vw(28);
     width: f.get_vw(120);
