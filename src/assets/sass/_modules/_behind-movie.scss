@@ -8,6 +8,14 @@
   @include m.pc{
     padding: f.get_vw(47, v.$pcMaxWidth) f.get_vw(20, v.$pcMaxWidth);
   }
+  &__lead {
+    @include m.fz_vw_pc(14);
+    text-align: center;
+    margin-bottom: f.get_vw(20);
+    @include m.pc{
+      margin-bottom: f.get_vw(20, v.$pcMaxWidth);
+    }
+  }
   &__heading {
     display: flex;
     justify-content: space-between;
@@ -18,9 +26,7 @@
     }
 
     &__ja {
-      @include m.pc{
-        @include m.fz_vw_pc(14);
-      }
+      @include m.fz_vw_pc(14);
     }
 
     &__en {

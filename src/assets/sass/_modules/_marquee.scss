@@ -35,5 +35,9 @@
     display: flex;
     align-items: center;
     padding-top: 0.1em;
+    margin-right: f.get_vw(3);
+    @include m.pc{
+      margin-right: f.get_vw(10, v.$pcMaxWidth);
+    }
   }
 }

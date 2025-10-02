@@ -32,6 +32,14 @@
       &__icon {
         width: f.get_vw(21);
         translate: 0 -0.2em;
+        @keyframes heart_beat {
+          0% {
+            scale: 1;
+          }
+          100% {
+            scale: 1;
+          }
+        }
         @include m.pc{
           width: f.get_vw(21, v.$pcMaxWidth);
           translate: 0 0em;
