@@ -37,8 +37,6 @@ function createScrollTriggerAll(
 
 function createScrollTriggerItemComment() {
   document.querySelectorAll(".item__comment").forEach((target) => {
-    console.log(target.querySelector(".item__comment__lead"));
-
     ScrollTrigger.create({
       trigger: target,
       start: "top center",
