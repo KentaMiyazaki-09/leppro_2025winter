@@ -124,9 +124,11 @@
   
         <div class="profile-modal__question">
         <% element.question1.forEach(question => { %>
-          <div class="profile-modal__question__item">
+          <div class="profile-modal__question__item profile-modal__question__item--1">
             <p class="profile-modal__question__item__q"><%- question.Q %></p>
-            <p class="profile-modal__question__item__a"><%- question.A %></p>
+            <div class="profile-modal__question__item__a-wrapper">
+              <p class="profile-modal__question__item__a"><%- question.A %></p>
+            </div>
           </div>
         <% }) %>
         </div>
@@ -164,9 +166,11 @@
   
         <div class="profile-modal__question">
         <% element.question2.forEach(question => { %>
-          <div class="profile-modal__question__item">
+          <div class="profile-modal__question__item profile-modal__question__item--2">
             <p class="profile-modal__question__item__q"><%- question.Q %></p>
-            <p class="profile-modal__question__item__a"><%- question.A %></p>
+            <div class="profile-modal__question__item__a-wrapper">
+              <p class="profile-modal__question__item__a"><%- question.A %></p>
+            </div>
           </div>
         <% }) %>
         </div>
