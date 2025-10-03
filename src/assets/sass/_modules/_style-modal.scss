@@ -168,6 +168,7 @@
       }
     }
     &__arrow {
+      cursor: pointer;
       @include m.font_Shree_normal;
       @include m.fz_vw(20);
       @include m.fz_vw_pc(20);

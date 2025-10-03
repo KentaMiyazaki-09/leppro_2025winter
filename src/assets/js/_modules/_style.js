@@ -38,8 +38,24 @@ export default () => {
     const embla = EmblaCarousel(emblaNode, { loop: true });
     const slides = embla.slideNodes();
 
+    // 最初のスライドにactive付与（画像が切り替わる）
     slides[0].classList.add("active");
 
+    // 矢印ボタン
+    const leftArrow = countEl.querySelector(".style-modal__count__arrow--left");
+    const rightArrow = countEl.querySelector(
+      ".style-modal__count__arrow--right"
+    );
+
+    leftArrow.addEventListener("click", () => {
+      embla.scrollPrev();
+    });
+
+    rightArrow.addEventListener("click", () => {
+      embla.scrollNext();
+    });
+
+    // アクティブの動き
     embla.on("select", () => {
       const selected = embla.selectedScrollSnap();
       linkSliderList[num].scrollTo(selected);
