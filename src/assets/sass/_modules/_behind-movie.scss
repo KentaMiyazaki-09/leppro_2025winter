@@ -47,7 +47,7 @@
   &__heading {
     display: flex;
     justify-content: space-between;
-    margin-bottom: f.get_vw(26);
+    margin-bottom: f.get_vw(40);
     @include m.pc{
       width: f.get_vw(400, v.$pcMaxWidth);
       margin: 0 auto f.get_vw(40, v.$pcMaxWidth);
