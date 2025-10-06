@@ -41,7 +41,7 @@
     text-align: center;
     margin-bottom: f.get_vw(20);
     @include m.pc{
-      margin-bottom: f.get_vw(39, v.$pcMaxWidth);
+      margin-bottom: f.get_vw(20, v.$pcMaxWidth);
     }
   }
   &__heading {
@@ -50,7 +50,7 @@
     margin-bottom: f.get_vw(26);
     @include m.pc{
       width: f.get_vw(400, v.$pcMaxWidth);
-      margin: 0 auto f.get_vw(26, v.$pcMaxWidth);
+      margin: 0 auto f.get_vw(40, v.$pcMaxWidth);
     }
 
     &__ja {
