@@ -6,7 +6,7 @@
   padding: f.get_vw(10);
   background-color: #fff;
   @include m.pc{
-    padding: f.get_vw(100, v.$pcMaxWidth) f.get_vw(20, v.$pcMaxWidth);
+    padding: f.get_vw(72, v.$pcMaxWidth) f.get_vw(20, v.$pcMaxWidth);
   }
 
   &.has-animation {
@@ -46,9 +46,9 @@
     &.active {
       @keyframes blink-onoff {
         0%   { opacity: 0; }
-        10%  { opacity: 1; } // 一瞬で点灯（stepsで瞬間切替）
-        40%  { opacity: 1; } // 点灯キープ
-        41%  { opacity: 0; } // 一瞬で消灯
+        10%  { opacity: 1; }
+        40%  { opacity: 1; }
+        41%  { opacity: 0; }
         100% { opacity: 0; }
       }
       .circle {
@@ -115,7 +115,7 @@
       @include m.pc{
         position: relative;
         display: flex;
-        width: f.get_vw(1065, v.$pcMaxWidth);
+        width: f.get_vw(1200, v.$pcMaxWidth);
         margin: 0 auto f.get_vw(150, v.$pcMaxWidth);
       }
     }
@@ -133,10 +133,10 @@
       &__1 img {
       }
       &__2 img {
-        animation-delay: 1.4s;
+        animation-delay: 1.2s;
       }
       &__3 img {
-        animation-delay: 0.8s;
+        animation-delay: 0.6s;
       }
     }
 

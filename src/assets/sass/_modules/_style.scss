@@ -54,7 +54,6 @@
   
     &__marquee{
       z-index: 10;
-      --dur: 30s; /* 1周の時間 */
   
       overflow: hidden;
       position: relative;
@@ -72,11 +71,13 @@
       height: 100%;
       width: auto;
       will-change: transform;
-      animation: marquee-scroll-style var(--dur) linear infinite;
+      animation: marquee-scroll-style 10s linear infinite;
     }
     &__item {
       line-height: 1;
       flex: 0 0 auto;
+
+      margin-left: -20px;
 
       > img {
         display: block;

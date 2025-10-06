@@ -65,7 +65,7 @@
   &__ttl {
     margin-bottom: f.get_vw(27);
     @include m.pc{
-      margin-bottom: f.get_vw(49, v.$pcMaxWidth);
+      margin-bottom: f.get_vw(98, v.$pcMaxWidth);
     }
     &__primary {
       text-align: center;

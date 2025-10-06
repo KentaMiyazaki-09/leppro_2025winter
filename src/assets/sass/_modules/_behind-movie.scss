@@ -41,7 +41,7 @@
     text-align: center;
     margin-bottom: f.get_vw(20);
     @include m.pc{
-      margin-bottom: f.get_vw(20, v.$pcMaxWidth);
+      margin-bottom: f.get_vw(39, v.$pcMaxWidth);
     }
   }
   &__heading {
